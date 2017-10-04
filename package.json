@@ -1,0 +1,26 @@
+{
+  "name": "patternx",
+  "version": "0.0.1",
+  "description": "A symbiotic visual and textual editor for the patternweb",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patternweb/patternx.git"
+  },
+  "keywords": [
+    "parametric",
+    "patternweb"
+  ],
+  "author": "John Rees <john@bitsushi.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/patternweb/patternx/issues"
+  },
+  "homepage": "https://github.com/patternweb/patternx#readme",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
