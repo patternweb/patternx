@@ -2,9 +2,13 @@
   "name": "patternx",
   "version": "0.0.1",
   "description": "A symbiotic visual and textual editor for the patternweb",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "webpack-dev-server",
+    "lint": "prettier --write \"src/**/*.{js,json,css}\"",
+    "build": "cp -R public dist && PRODUCTION=true webpack -p",
+    "deploy": "npm run build && ghpages -p dist && rm -rf dist"
   },
   "repository": {
     "type": "git",
@@ -21,6 +25,24 @@
   },
   "homepage": "https://github.com/patternweb/patternx#readme",
   "devDependencies": {
-    "jest": "^21.2.1"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "ghpages": "^0.0.10",
+    "jest": "^21.1.0",
+    "prettier": "^1.7.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "babel-traverse": "^6.26.0",
+    "babel-types": "^6.26.0",
+    "babylon": "7.0.0-beta.27",
+    "snabbdom": "^0.7.0",
+    "snabbdom-to-html": "^3.3.0"
   }
 }
