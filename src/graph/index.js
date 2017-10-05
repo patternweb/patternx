@@ -1,3 +1,4 @@
+const svgPanZoom = require("svg-pan-zoom");
 const snabbdom = require("snabbdom");
 const patch = snabbdom.init([
   require("snabbdom/modules/attributes").default
@@ -73,6 +74,19 @@ function view(newData) {
 
 function buildGraph(graphData) {
   graphData.processes.map(addProcess);
+
+  const panZoom = svgPanZoom("svg", {
+    zoomEnabled: true,
+    panEnabled: true,
+    controlIconsEnabled: true,
+    fit: true,
+    center: true,
+    preventMouseEventsDefault: false,
+    zoomScaleSensitivity: 0.3,
+    dblClickZoomEnabled: false,
+    maxZoom: 2,
+    minZoom: 0.25
+  });
 }
 
 module.exports = {

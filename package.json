@@ -45,6 +45,7 @@
     "babylon-walk": "^1.0.2",
     "github-api": "^3.0.0",
     "snabbdom": "^0.7.0",
-    "snabbdom-to-html": "^3.3.0"
+    "snabbdom-to-html": "^3.3.0",
+    "svg-pan-zoom": "^3.5.3"
   }
 }
