@@ -42,6 +42,7 @@
     "babel-traverse": "^6.26.0",
     "babel-types": "^6.26.0",
     "babylon": "7.0.0-beta.27",
+    "babylon-walk": "^1.0.2",
     "github-api": "^3.0.0",
     "snabbdom": "^0.7.0",
     "snabbdom-to-html": "^3.3.0"

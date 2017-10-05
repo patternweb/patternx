@@ -17,6 +17,11 @@ let vnode = patch(container, view(data));
 
 function addProcess(object) {
   // console.log(object);
+  // prettier-ignore
+
+  const width = 160
+  const height = 60;
+
   data = [
     ...data,
     h(
@@ -28,14 +33,17 @@ function addProcess(object) {
         }
       },
       [
-        h("text", object.name),
-        ...object.arguments.map((input, index) =>
-          h(
-            "text",
-            { attrs: { x: -10, y: index * 20, "text-anchor": "end" } },
+        // h("circle.inport", { attrs: { cx: -width/2, cy: 0, r: 6 }}),
+        h("circle.outport", { attrs: { cx: width / 2, cy: 0, r: 6 } }),
+        h("rect", { attrs: { x: -width / 2, y: -height / 2, height, width } }),
+        h("text.name", object.name),
+        ...object.arguments.map((input, index) => {
+          return h(
+            "text.inport-name",
+            { attrs: { x: -width / 2 + 5, y: index * 20 } },
             input
-          )
-        )
+          );
+        })
       ]
     )
   ];
@@ -43,13 +51,10 @@ function addProcess(object) {
 }
 
 function addComponent(object) {
+  // prettier-ignore
   data = [
     ...data,
-    h(
-      "text",
-      { attrs: { y: Math.random() * 800, x: 100, class: "component" } },
-      object.name
-    )
+    h("text", { attrs: { y: Math.random() * 800, x: 100, class: "component" } }, object.name)
   ];
   render();
   // data.functions.push(object)
@@ -62,11 +67,8 @@ function render() {
 
 function view(newData) {
   // console.log(newData)
-  return h(
-    "svg",
-    { attrs: { id: "graph", class: "panel", count: counter++ } },
-    newData
-  );
+  // prettier-ignore
+  return h("svg", { attrs: { id: "graph", class: "panel", count: counter++ } }, newData);
 }
 
 module.exports = {

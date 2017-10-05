@@ -32,6 +32,39 @@ main {
 }
 #graph {
   background: #CCC;
+  cursor: -webkit-grab;
+}
+
+.process:hover rect {
+  transform: scale(1.01);
+}
+
+.process rect {
+  fill: white;
+  stroke: black;
+  rx: 4;
+  ry: 4;
+}
+
+.process text.name {
+  text-anchor: middle;
+}
+
+.process text.inport-name {
+  text-anchor: left;
+}
+
+.process text {
+  user-select: none;
+}
+
+.process circle.outport {
+  cursor: pointer;
+  transition: r 0.15s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.process circle.outport:hover {
+  r: 12;
 }
 
 :focus {

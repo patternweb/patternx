@@ -1,4 +1,5 @@
 import * as babylon from "babylon";
+import walk from "babylon-walk";
 import traverse from "babel-traverse";
 import t from "babel-types";
 import {
@@ -46,7 +47,7 @@ function Rotate(geometry?:number, angle?:number, plane?:number):number {
 const i = 4
 const p = PointXYZ()
 const x = UnitX(i)
-console.log(Rotate(Move(p, x).geometry, Radians(60)))
+Rotate(Move(p, x).geometry, Radians(60))
   `;
   parseCode(codeEditor.value);
 }
@@ -61,7 +62,7 @@ function parseCode(code) {
       let fn = doNothing;
       switch (path.node.type) {
         case "FunctionDeclaration":
-          fn = addFunction;
+          // fn = addFunction;
           break;
         case "CallExpression":
           fn = addExpression;
