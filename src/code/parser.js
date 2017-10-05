@@ -53,6 +53,7 @@ const visitors = {
     // console.log(node.arguments)
     state.processes.push({
       component: node.callee.name,
+      name: `_${node.callee.name}0`,
       inputs: node.arguments.length
     });
     for (const argument of node.arguments) {
