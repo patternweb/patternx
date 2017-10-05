@@ -7,7 +7,7 @@ test("parsing AST", () => {
     }
 
     function Move(geometry?:number, motion?:number):{ geometry:number, transform:number } {
-      return { geometry, transform: motion};
+      return { geometry, transform: motion };
     }
 
     function UnitX(factor?:number):number {
@@ -30,7 +30,57 @@ test("parsing AST", () => {
     Rotate(Move(p, x).geometry, Radians(60))`;
 
   const result = {
-    components: ["PointXYZ", "Move", "UnitX", "Radians", "Rotate"],
+    components: [
+      {
+        name: "PointXYZ",
+        inports: {
+          // xComponent: {
+          //   required: false,
+          //   type: "number",
+          //   defaultValue: 10
+          // }
+          "xComponent?": "number",
+          "yComponent?": "number",
+          "zComponent?": "number",
+          "system?": "any"
+        },
+        outport: "number"
+      },
+      {
+        name: "Move",
+        inports: {
+          "geometry?": "number",
+          "motion?": "number"
+        },
+        outports: {
+          geometry: "number",
+          transform: "number"
+        }
+      },
+      {
+        name: "UnitX",
+        inports: {
+          "factor?": "number"
+        },
+        outport: "number"
+      },
+      {
+        name: "Radians",
+        inports: {
+          "degrees?": "number"
+        },
+        outport: "number"
+      },
+      {
+        name: "Rotate",
+        inports: {
+          "geometry?": "number",
+          "angle?": "number",
+          "plane?": "number"
+        },
+        outport: "number"
+      }
+    ],
     processes: [
       {
         component: "PointXYZ",

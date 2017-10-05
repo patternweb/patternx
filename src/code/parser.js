@@ -2,6 +2,11 @@ const t = require("babel-types");
 const babylon = require("babylon");
 const walk = require("babylon-walk");
 
+const keys = {
+  TSNumberKeyword: "number",
+  TSStringKeyword: "string"
+};
+
 const visitors = {
   // Statement(node, state, cont) {
   //   console.log(node)
@@ -19,7 +24,29 @@ const visitors = {
   // },
 
   FunctionDeclaration(node, state) {
-    state.components.push(node.id.name);
+    const inports = node.params.reduce((ob, param) => {
+      const key = [param.name, param.optional ? "?" : ""].join("");
+      ob[key] = keys[param.typeAnnotation.typeAnnotation.type] || "any";
+      return ob;
+    }, {});
+
+    const component = {
+      name: node.id.name,
+      inports
+    };
+
+    if (keys[node.returnType.typeAnnotation.type]) {
+      component["outport"] = keys[node.returnType.typeAnnotation.type];
+    } else if (node.returnType.typeAnnotation.type === "TSTypeLiteral") {
+      component[
+        "outports"
+      ] = node.returnType.typeAnnotation.members.reduce((ob, key) => {
+        ob[key.key.name] = keys[key.typeAnnotation.typeAnnotation.type];
+        return ob;
+      }, {});
+    }
+
+    state.components.push(component);
   },
 
   CallExpression(node, state) {
