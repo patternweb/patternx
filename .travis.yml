@@ -2,6 +2,8 @@ language: node_js
 node_js:
   - "node"
 # automatically deploy to gh-pages after passing on master
+before_deploy:
+  - npm run build
 deploy:
   provider: pages
   skip_cleanup: true
