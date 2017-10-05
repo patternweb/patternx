@@ -16,13 +16,27 @@ let counter = 0;
 let vnode = patch(container, view(data));
 
 function addProcess(object) {
-  console.log(object);
+  // console.log(object);
   data = [
     ...data,
     h(
-      "text",
-      { attrs: { y: Math.random() * 800, x: 300, class: "process" } },
-      object.name
+      "g",
+      {
+        attrs: {
+          transform: `translate(${300},${Math.random() * 800})`,
+          class: "process"
+        }
+      },
+      [
+        h("text", object.name),
+        ...object.arguments.map((input, index) =>
+          h(
+            "text",
+            { attrs: { x: -10, y: index * 20, "text-anchor": "end" } },
+            input
+          )
+        )
+      ]
     )
   ];
   render();
