@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "webpack-dev-server",
     "lint": "prettier --write \"src/**/*.{js,json,css}\"",
-    "build": "cp -R public dist && PRODUCTION=true webpack -p",
+    "build": "cp -R public dist && PRODUCTION=true webpack",
     "deploy": "npm run build && ghpages -p dist && rm -rf dist"
   },
   "repository": {
