@@ -2,7 +2,7 @@ import graph from "./graph";
 
 function log(object) {
   // console.log(JSON.stringify(object, null, 2))
-  console.log(object);
+  // console.log(object);
 }
 
 function doNothing(node) {}

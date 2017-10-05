@@ -35,24 +35,29 @@ test("parsing AST", () => {
       {
         component: "PointXYZ",
         name: "p",
-        inputs: 0 //[]
+        inputs: 0
+        // inputs: []
       },
       {
         component: "UnitX",
         name: "x",
-        inputs: 1 //["i"]
+        inputs: 1
+        // inputs: ["i>OUT"]
       },
       {
         component: "Rotate",
-        inputs: 2 //[]
+        inputs: 2
+        // inputs: [Move.geometry, Radians]
       },
       {
         component: "Move",
-        inputs: 2 //["p", "x"]
+        inputs: 2
+        // inputs: ["p", "x"]
       },
       {
         component: "Radians",
-        inputs: 1 //[60]
+        inputs: 1
+        // inputs: [60]
       }
     ]
   };
