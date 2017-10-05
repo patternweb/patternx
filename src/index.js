@@ -8,13 +8,19 @@ import { buildGraph } from "./graph";
 import { parse } from "./code/parser";
 import { createFiles } from "./files";
 import { createGist } from "./github/create_gist";
+import { loadGistCode } from "./github/load_gist";
 
 const codeEditor = document.getElementById("code");
 
 const params = new URLSearchParams(location.search);
 const gistID = params.get("gist");
 if (gistID) {
-  console.log(`TODO: load gist ${gistID}`);
+  loadGistCode(gistID)
+    .catch(err => alert(err.message))
+    .then(code => {
+      codeEditor.value = code;
+      buildGraph(parse(codeEditor.value));
+    });
 } else {
   codeEditor.value = `
 // functions
