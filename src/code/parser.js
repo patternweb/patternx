@@ -38,34 +38,43 @@ const visitors = {
     if (keys[node.returnType.typeAnnotation.type]) {
       component.outport = keys[node.returnType.typeAnnotation.type];
     } else if (node.returnType.typeAnnotation.type === "TSTypeLiteral") {
-      component.outports = node.returnType.typeAnnotation.members.reduce((ob, key) => {
-        ob[key.key.name] = keys[key.typeAnnotation.typeAnnotation.type];
-        return ob;
-      }, {});
+      component.outports = node.returnType.typeAnnotation.members.reduce(
+        (ob, key) => {
+          ob[key.key.name] = keys[key.typeAnnotation.typeAnnotation.type];
+          return ob;
+        },
+        {}
+      );
     }
 
     state.components.push(component);
   },
 
   CallExpression(node, state) {
-
     // console.log(node.callee.name, node.arguments)
     const _process = {
       component: node.callee.name,
-      name: `_${node.callee.name}0`,
-    }
+      name: `_${node.callee.name}0`
+    };
     if (node.arguments.length > 0) {
-      _process.inputs = node.arguments.reduce( (obj, arg, index) => {
-        const key = Object.keys(state.components.find(c => c.name === node.callee.name).inports)[index]
-        if (t.isIdentifier(arg)) { obj[key] = `$${arg.name}` }
-        else if (t.isNumericLiteral(arg)) { obj[key] = arg.value }
-        else if (t.isMemberExpression(arg)) { obj[key] = `$_${arg.object.callee.name}0>${arg.property.name}` }
-        else if (t.isCallExpression(arg)) { obj[key] = `$_${arg.callee.name}0` }
+      _process.inputs = node.arguments.reduce((obj, arg, index) => {
+        const key = Object.keys(
+          state.components.find(c => c.name === node.callee.name).inports
+        )[index];
+        if (t.isIdentifier(arg)) {
+          obj[key] = `$${arg.name}`;
+        } else if (t.isNumericLiteral(arg)) {
+          obj[key] = arg.value;
+        } else if (t.isMemberExpression(arg)) {
+          obj[key] = `$_${arg.object.callee.name}0>${arg.property.name}`;
+        } else if (t.isCallExpression(arg)) {
+          obj[key] = `$_${arg.callee.name}0`;
+        }
         // else { console.log(arg); obj[key] = arg.property }
         // else console.log(node.callee.name, arg.type)
 
-        return obj
-      }, {})
+        return obj;
+      }, {});
     }
     state.processes.push(_process);
 
@@ -78,16 +87,20 @@ const visitors = {
     if (t.isCallExpression(node.init)) {
       const _process = {
         component: node.init.callee.name,
-        name: node.id.name,
-      }
+        name: node.id.name
+      };
       if (node.init.arguments.length > 0) {
-        _process.inputs = node.init.arguments.reduce( (obj, arg, index) => {
-          const key = Object.keys(state.components.find(c => c.name === node.init.callee.name).inports)[index]
-          if (t.isIdentifier(arg)) { obj[key] = `$${arg.name}` }
-          return obj
-        }, {})
+        _process.inputs = node.init.arguments.reduce((obj, arg, index) => {
+          const key = Object.keys(
+            state.components.find(c => c.name === node.init.callee.name).inports
+          )[index];
+          if (t.isIdentifier(arg)) {
+            obj[key] = `$${arg.name}`;
+          }
+          return obj;
+        }, {});
       }
-      state.processes.push(_process)
+      state.processes.push(_process);
     }
     // cont(node.init)
 

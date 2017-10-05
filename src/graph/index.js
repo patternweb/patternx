@@ -1,10 +1,10 @@
 const snabbdom = require("snabbdom");
 const patch = snabbdom.init([
-  require("snabbdom/modules/attributes").default,
-  require("snabbdom/modules/class").default, // makes it easy to toggle classes
-  require("snabbdom/modules/props").default, // for setting properties on DOM elements
-  require("snabbdom/modules/style").default, // handles styling on elements with support for animations
-  require("snabbdom/modules/eventlisteners").default // attaches event listeners
+  require("snabbdom/modules/attributes").default
+  // require("snabbdom/modules/class").default, // makes it easy to toggle classes
+  // require("snabbdom/modules/props").default, // for setting properties on DOM elements
+  // require("snabbdom/modules/style").default, // handles styling on elements with support for animations
+  // require("snabbdom/modules/eventlisteners").default // attaches event listeners
 ]);
 const h = require("snabbdom/h").default;
 
@@ -17,9 +17,8 @@ let vnode = patch(container, view(data));
 
 function addProcess(object) {
   // console.log(object);
-  // prettier-ignore
 
-  const width = 160
+  const width = 160;
   const height = 60;
 
   data = [
@@ -36,14 +35,15 @@ function addProcess(object) {
         // h("circle.inport", { attrs: { cx: -width/2, cy: 0, r: 6 }}),
         h("circle.outport", { attrs: { cx: width / 2, cy: 0, r: 6 } }),
         h("rect", { attrs: { x: -width / 2, y: -height / 2, height, width } }),
-        h("text.name", object.name),
-        ...object.arguments.map((input, index) => {
-          return h(
-            "text.inport-name",
-            { attrs: { x: -width / 2 + 5, y: index * 20 } },
-            input
-          );
-        })
+        h("text.name", object.component)
+        // h("text.component", object.component),
+        // ...Object.keys(object.inputs).map((input, index) => {
+        //   return h(
+        //     "text.inport-name",
+        //     { attrs: { x: -width / 2 + 5, y: index * 20 } },
+        //     input
+        //   );
+        // })
       ]
     )
   ];
@@ -71,7 +71,12 @@ function view(newData) {
   return h("svg", { attrs: { id: "graph", class: "panel", count: counter++ } }, newData);
 }
 
+function buildGraph(graphData) {
+  graphData.processes.map(addProcess);
+}
+
 module.exports = {
   addComponent,
-  addProcess
+  addProcess,
+  buildGraph
 };

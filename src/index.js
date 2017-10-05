@@ -1,13 +1,11 @@
-import * as babylon from "babylon";
-import walk from "babylon-walk";
-import traverse from "babel-traverse";
-import t from "babel-types";
 import {
   doNothing,
   addFunction,
   addExpression,
   addVariableDeclaration
 } from "./elements";
+import { buildGraph } from "./graph";
+import { parse } from "./code/parser";
 import { createFiles } from "./files";
 import { createGist } from "./github/create_gist";
 
@@ -19,7 +17,6 @@ if (gistID) {
   console.log(`TODO: load gist ${gistID}`);
 } else {
   codeEditor.value = `
-// functions
 // functions
 
 function PointXYZ(xComponent?:number, yComponent?:number, zComponent?:number, system?:any):number {
@@ -49,35 +46,35 @@ const p = PointXYZ()
 const x = UnitX(i)
 Rotate(Move(p, x).geometry, Radians(60))
   `;
-  parseCode(codeEditor.value);
+  buildGraph(parse(codeEditor.value));
 }
 
-function parseCode(code) {
-  const ast = babylon.parse(code, {
-    sourceType: "module",
-    plugins: ["typescript"]
-  });
-  traverse(ast, {
-    enter(path) {
-      let fn = doNothing;
-      switch (path.node.type) {
-        case "FunctionDeclaration":
-          // fn = addFunction;
-          break;
-        case "CallExpression":
-          fn = addExpression;
-          break;
-        case "VariableDeclaration":
-          fn = addVariableDeclaration;
-          break;
-      }
-      fn(path.node);
-    }
-  });
-}
+// function parseCode(code) {
+//   const ast = babylon.parse(code, {
+//     sourceType: "module",
+//     plugins: ["typescript"]
+//   });
+//   traverse(ast, {
+//     enter(path) {
+//       let fn = doNothing;
+//       switch (path.node.type) {
+//         case "FunctionDeclaration":
+//           // fn = addFunction;
+//           break;
+//         case "CallExpression":
+//           fn = addExpression;
+//           break;
+//         case "VariableDeclaration":
+//           fn = addVariableDeclaration;
+//           break;
+//       }
+//       fn(path.node);
+//     }
+//   });
+// }
 
 function handleCodeKeyUp(event) {
-  parseCode(event.target.value);
+  buildGraph(parse(codeEditor.value));
 }
 
 function handleSaveButtonClick(event) {

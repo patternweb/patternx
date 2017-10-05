@@ -22,8 +22,6 @@ test("parsing AST", () => {
       return geometry;
     }
 
-    // nodes
-
     const i = 4
     const p = PointXYZ()
     const x = UnitX(i)
@@ -84,7 +82,7 @@ test("parsing AST", () => {
     processes: [
       {
         component: "PointXYZ",
-        name: "p",
+        name: "p"
         // inputs: 0
         // inputs: {}
       },
