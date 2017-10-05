@@ -25,6 +25,10 @@
   },
   "homepage": "https://github.com/patternweb/patternx#readme",
   "devDependencies": {
+    "@types/base64-js": "^1.2.5",
+    "@types/lodash": "^4.14.77",
+    "@types/node": "^8.0.32",
+    "@types/three": "^0.84.26",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -35,9 +39,6 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
   },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "dependencies": {
     "babel-traverse": "^6.26.0",
     "babel-types": "^6.26.0",
@@ -45,6 +46,10 @@
     "babylon-walk": "^1.0.2",
     "github-api": "^3.0.0",
     "snabbdom": "^0.7.0",
-    "snabbdom-to-html": "^3.3.0"
+    "snabbdom-to-html": "^3.3.0",
+    "typescript": "^2.5.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
