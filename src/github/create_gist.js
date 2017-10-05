@@ -1,15 +1,14 @@
 const GitHub = require("github-api");
-const files = require("../files");
 
 /**
  * Creates a GitHub gist and returns its details as a promise.
  * If authCredentials are omitted the gist will created by an anonymous user.
  * @constructor
- * @param {Object} content - List of files in format { `filename`: { content: `fileContent` }}
+ * @param {Object} files - Object of files in format { `filename`: { content: `fileContent` }}
  * @param {Boolean} [isPublic] - Should the gist be publicly findable? Default: true.
  * @param {Object} [authCredentials] - Either {username: '', password: ''} or {token: 'OAUTH_TOKEN'}
  */
-async function createGist(content, isPublic = true, authCredentials = null) {
+async function createGist(files, isPublic = true, authCredentials = null) {
   let gist = new GitHub(authCredentials).getGist();
   await gist
     .create({
@@ -25,10 +24,6 @@ async function createGist(content, isPublic = true, authCredentials = null) {
   return response.data;
 }
 
-createGist("test")
-  .then(gist => {
-    console.log(gist);
-  })
-  .catch(err => {
-    console.error(`Error: ${err.message}`);
-  });
+module.exports = {
+  createGist
+};

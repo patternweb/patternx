@@ -10,14 +10,26 @@ const packageFile = {
   }
 };
 
+function createFiles(indexContent) {
+  return {
+    "package.json": {
+      content: JSON.stringify(packageFile, null, 2),
+      language: "JSON",
+      type: "application/json"
+    },
+    "index.js": {
+      content: indexContent,
+      language: "Javascript",
+      type: "application/javascript"
+    },
+    "README.md": {
+      content: "## Test File\n\nfor patternx",
+      language: "Markdown",
+      type: "text/plain"
+    }
+  };
+}
+
 module.exports = {
-  "package.json": {
-    content: JSON.stringify(packageFile, null, 2)
-  },
-  "index.js": {
-    content: `console.log('hello world')`
-  },
-  "README.md": {
-    content: "## Test File\n\nfor patternx"
-  }
+  createFiles
 };

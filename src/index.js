@@ -7,10 +7,17 @@ import {
   addExpression,
   addVariableDeclaration
 } from "./elements";
+import { createFiles } from "./files";
+import { createGist } from "./github/create_gist";
 
 const codeEditor = document.getElementById("code");
 
-codeEditor.value = `
+const params = new URLSearchParams(location.search);
+const gistID = params.get("gist");
+if (gistID) {
+  console.log(`TODO: load gist ${gistID}`);
+} else {
+  codeEditor.value = `
 // functions
 
 function PointXYZ(xComponent:number, yComponent:number, zComponent:number, system:any):number {
@@ -39,8 +46,9 @@ const i = 4
 const p = PointXYZ()
 const x = UnitX(60)
 Rotate(Move(p, x), Radians(j))
-`;
-parseCode(codeEditor.value);
+  `;
+  parseCode(codeEditor.value);
+}
 
 function parseCode(code) {
   const ast = babylon.parse(code, {
@@ -70,4 +78,20 @@ function handleCodeKeyUp(event) {
   parseCode(event.target.value);
 }
 
+function handleSaveButtonClick(event) {
+  console.log("saving...");
+  createGist(createFiles(codeEditor.value))
+    .then(gist => {
+      console.log(gist);
+      const params = new URLSearchParams(location.search);
+      params.set("gist", gist.id);
+      window.history.replaceState({}, "", `${location.pathname}?${params}`);
+    })
+    .catch(err => console.error(err.message));
+}
+
 codeEditor.addEventListener("keyup", handleCodeKeyUp);
+
+document
+  .getElementById("save-button")
+  .addEventListener("click", handleSaveButtonClick);
