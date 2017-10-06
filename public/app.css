@@ -46,8 +46,13 @@ main {
   ry: 4;
 }
 
-.process text.name {
+.process text.name,
+.process text.component {
   text-anchor: middle;
+}
+.process text.name {
+  fill: #CCC;
+  font-size: 12px;
 }
 
 .process text.inport-name {

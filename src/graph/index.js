@@ -1,3 +1,4 @@
+const svgPanZoom = require("svg-pan-zoom");
 const snabbdom = require("snabbdom");
 const patch = snabbdom.init([
   require("snabbdom/modules/attributes").default
@@ -9,33 +10,31 @@ const patch = snabbdom.init([
 const h = require("snabbdom/h").default;
 
 const container = document.getElementById("graph");
+const { layout } = require("./layout");
 
 let data = [];
 let counter = 0;
 
 let vnode = patch(container, view(data));
 
-function addProcess(object) {
-  // console.log(object);
-
-  const width = 160;
-  const height = 60;
-
+function addProcess(name, component, { width, height, x, y }) {
   data = [
     ...data,
     h(
       "g",
       {
         attrs: {
-          transform: `translate(${300},${Math.random() * 800})`,
-          class: "process"
+          transform: `translate(${x},${y})`,
+          class: "process",
+          id: name
         }
       },
       [
         // h("circle.inport", { attrs: { cx: -width/2, cy: 0, r: 6 }}),
         h("circle.outport", { attrs: { cx: width / 2, cy: 0, r: 6 } }),
         h("rect", { attrs: { x: -width / 2, y: -height / 2, height, width } }),
-        h("text.name", object.component)
+        h("text.component", component),
+        h("text.name", { attrs: { y: 15 } }, name)
         // h("text.component", object.component),
         // ...Object.keys(object.inputs).map((input, index) => {
         //   return h(
@@ -72,7 +71,40 @@ function view(newData) {
 }
 
 function buildGraph(graphData) {
-  graphData.processes.map(addProcess);
+  const vGraph = graphData.processes.reduce(
+    (obj, proc) => {
+      obj.nodes[proc.name] = proc.component;
+      const edges = Object.keys(proc.inputs || {})
+        .filter(key => proc.inputs[key][0] === "$")
+        .map(key => {
+          return [proc.inputs[key].slice(1).split(">")[0], proc.name];
+        });
+      obj.edges = obj.edges.concat(edges);
+      return obj;
+    },
+    { nodes: { i: "Var" }, edges: [] }
+  );
+
+  // console.log(graphData)
+  // console.log(vGraph);
+  const positionedGraph = layout(vGraph);
+
+  for (const key of Object.keys(vGraph.nodes)) {
+    addProcess(key, vGraph.nodes[key], positionedGraph.nodes[key]);
+  }
+
+  const panZoom = svgPanZoom("svg", {
+    zoomEnabled: true,
+    panEnabled: true,
+    controlIconsEnabled: true,
+    fit: true,
+    center: false,
+    preventMouseEventsDefault: false,
+    zoomScaleSensitivity: 0.3,
+    dblClickZoomEnabled: false,
+    maxZoom: 2,
+    minZoom: 0.25
+  });
 }
 
 module.exports = {
