@@ -17,8 +17,6 @@ let counter = 0;
 let vnode = patch(container, view(data));
 
 function addProcess(object) {
-  // console.log(object);
-
   const width = 160;
   const height = 60;
 
@@ -29,7 +27,8 @@ function addProcess(object) {
       {
         attrs: {
           transform: `translate(${300},${Math.random() * 800})`,
-          class: "process"
+          class: "process",
+          id: object.name
         }
       },
       [
@@ -80,7 +79,7 @@ function buildGraph(graphData) {
     panEnabled: true,
     controlIconsEnabled: true,
     fit: true,
-    center: true,
+    center: false,
     preventMouseEventsDefault: false,
     zoomScaleSensitivity: 0.3,
     dblClickZoomEnabled: false,
