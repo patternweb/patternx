@@ -55,30 +55,6 @@ Rotate(Move(p, x).geometry, Radians(60))
   buildGraph(parse(codeEditor.value));
 }
 
-// function parseCode(code) {
-//   const ast = babylon.parse(code, {
-//     sourceType: "module",
-//     plugins: ["typescript"]
-//   });
-//   traverse(ast, {
-//     enter(path) {
-//       let fn = doNothing;
-//       switch (path.node.type) {
-//         case "FunctionDeclaration":
-//           // fn = addFunction;
-//           break;
-//         case "CallExpression":
-//           fn = addExpression;
-//           break;
-//         case "VariableDeclaration":
-//           fn = addVariableDeclaration;
-//           break;
-//       }
-//       fn(path.node);
-//     }
-//   });
-// }
-
 function handleCodeKeyUp(event) {
   buildGraph(parse(codeEditor.value));
 }
