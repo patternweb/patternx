@@ -56,7 +56,8 @@ main {
 }
 
 .process text.inport-name {
-  text-anchor: left;
+  text-anchor: end;
+  font-size: 10px;
 }
 
 .process text {

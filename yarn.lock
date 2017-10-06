@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@types/three@^0.84.26":
+  version "0.84.26"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.84.26.tgz#4d9ad1f92827ccec97a52a291941d771e89cc3c4"
+  dependencies:
+    "@types/webvr-api" "*"
+
+"@types/webvr-api@*":
+  version "0.0.31"
+  resolved "https://registry.yarnpkg.com/@types/webvr-api/-/webvr-api-0.0.31.tgz#f6061fe88a035d34a8b6a0c55f8758901ec8a08e"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"

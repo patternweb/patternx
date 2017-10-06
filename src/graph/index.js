@@ -18,6 +18,7 @@ let counter = 0;
 let vnode = patch(container, view(data));
 
 function addProcess(name, component, { width, height, x, y }) {
+  console.log(component);
   data = [
     ...data,
     h(
@@ -33,16 +34,16 @@ function addProcess(name, component, { width, height, x, y }) {
         // h("circle.inport", { attrs: { cx: -width/2, cy: 0, r: 6 }}),
         h("circle.outport", { attrs: { cx: width / 2, cy: 0, r: 6 } }),
         h("rect", { attrs: { x: -width / 2, y: -height / 2, height, width } }),
-        h("text.component", component),
-        h("text.name", { attrs: { y: 15 } }, name)
-        // h("text.component", object.component),
-        // ...Object.keys(object.inputs).map((input, index) => {
-        //   return h(
-        //     "text.inport-name",
-        //     { attrs: { x: -width / 2 + 5, y: index * 20 } },
-        //     input
-        //   );
-        // })
+        h("text.component", component.name),
+        h("text.name", { attrs: { y: 15 } }, name),
+
+        ...Object.keys(component.inports).map((inport, index) => {
+          return h(
+            "text.inport-name",
+            { attrs: { x: -width / 2 - 3, y: index * 20 - height / 4 } },
+            inport
+          );
+        })
       ]
     )
   ];
@@ -82,15 +83,20 @@ function buildGraph(graphData) {
       obj.edges = obj.edges.concat(edges);
       return obj;
     },
-    { nodes: { i: "Var" }, edges: [] }
+    { nodes: { i: "Move" }, edges: [] }
   );
 
   // console.log(graphData)
-  // console.log(vGraph);
+  // console.log(vGraph)
+
   const positionedGraph = layout(vGraph);
 
   for (const key of Object.keys(vGraph.nodes)) {
-    addProcess(key, vGraph.nodes[key], positionedGraph.nodes[key]);
+    addProcess(
+      key,
+      graphData.components.find(c => c.name === vGraph.nodes[key]),
+      positionedGraph.nodes[key]
+    );
   }
 
   const panZoom = svgPanZoom("svg", {
