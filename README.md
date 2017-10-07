@@ -5,4 +5,13 @@
 
 A visual and code-based editor for patterns on the PatternWeb.
 
-### UNDER CONSTRUCTION
+## UNDER CONSTRUCTION
+
+### Adding TypeScript @type definitions
+
+```
+yarn add @types/PACKAGE
+yarn run compile:type PACKAGE
+```
+
+`public/libs/TYPE.json` and `public/libs/TYPE.min.json` will now include the methods from the PACKAGE in JSON format.

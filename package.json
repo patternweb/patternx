@@ -8,7 +8,9 @@
     "start": "webpack-dev-server",
     "lint": "prettier --write \"src/**/*.{js,json,css}\"",
     "build": "cp -R public dist && PRODUCTION=true webpack",
-    "deploy": "npm run build && ghpages -p dist && rm -rf dist"
+    "deploy": "npm run build && ghpages -p dist && rm -rf dist",
+    "compile:docgen": "tsc tools/docgen.ts --m commonjs",
+    "compile:type": "node tools/docgen.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.77",
+    "@types/node": "^8.0.33",
     "@types/three": "^0.84.26",
     "babel-traverse": "^6.26.0",
     "babel-types": "^6.26.0",
@@ -48,6 +52,7 @@
     "github-api": "^3.0.0",
     "snabbdom": "^0.7.0",
     "snabbdom-to-html": "^3.3.0",
-    "svg-pan-zoom": "^3.5.3"
+    "svg-pan-zoom": "^3.5.3",
+    "typescript": "^2.5.3"
   }
 }
