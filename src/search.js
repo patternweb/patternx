@@ -4,6 +4,8 @@ const search = document.getElementById("searchbox");
 const resultList = document.getElementById("results");
 const template = document.getElementById("template").innerHTML;
 
+const MAX_RESULTS = 15;
+
 async function getLibDocs(libName) {
   const url = `libs/${libName}.min.json`;
   const response = await fetch(url);
@@ -14,9 +16,10 @@ async function getLibDocs(libName) {
 
 const searchData = data => query =>
   data
-    .filter(item => item.name.toLowerCase().startsWith(query.toLowerCase()))
+    .filter(item => item.name.toLowerCase().indexOf(query.toLowerCase()) >= 0)
     .map(item => item)
-    .sort((a, b) => a.name > b.name);
+    .sort((a, b) => (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1))
+    .slice(0, MAX_RESULTS);
 
 function init(data) {
   const searchText = fromEvent("input", search)
@@ -26,7 +29,7 @@ function init(data) {
 
   const results = searchText
     .filter(text => text.length > 1)
-    .debounce(100)
+    .debounce(20)
     .map(searchData(data));
 
   const emptyResults = searchText.filter(text => text.length < 1).constant([]);
