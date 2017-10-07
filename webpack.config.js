@@ -4,7 +4,8 @@ const webpack = require('webpack');
 module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: {
-    app: './index.js'
+    app: './index.js',
+    search: './search.js'
   },
   output: {
     filename: '[name].bundle.js',

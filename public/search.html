@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/search.bundle.js" defer async></script>
+  <title>Search</title>
+</head>
+<body>
+  <form id="search">
+    <input type="text" id="searchbox" autofocus autocomplete="off" placeholder="Add a node...">
+    <ul id="results"></ul>
+    <div id="template" style="display: none">
+      <li>
+        <a href="https://en.wikipedia.org/wiki/{name}">{name}</a>
+      </li>
+    </div>
+  </form>
+</body>
+</html>
