@@ -7,7 +7,7 @@ const template = document.getElementById("template").innerHTML;
 const MAX_RESULTS = 15;
 
 async function getLibDocs(libName) {
-  const url = `libs/${libName}.min.json`;
+  const url = `libs/${libName}.json`;
   const response = await fetch(url);
   const body = await response.json();
   if (response.status === 200) return body;
