@@ -1,10 +1,52 @@
+const svgPanZoom = require("svg-pan-zoom");
+const snabbdom = require("snabbdom");
+const patch = snabbdom.init([
+  require("snabbdom/modules/attributes").default,
+  require("snabbdom/modules/eventlisteners").default
+]);
+const h = require("snabbdom/h").default;
+
 import { fromEvent, skipRepeats, merge } from "most";
 
 const search = document.getElementById("searchbox");
-const resultList = document.getElementById("results");
-const template = document.getElementById("template").innerHTML;
-
+const preview = document.getElementById("preview");
 const MAX_RESULTS = 15;
+
+const state = {
+  searchResults: [],
+  clickedResults: []
+};
+
+function handleClick(event) {
+  event.preventDefault();
+  state.clickedResults.push(event.target.innerHTML);
+  render();
+}
+
+function render() {
+  vnode = patch(vnode, view(state));
+}
+
+function view({ searchResults, clickedResults }) {
+  return h("div", [
+    h(
+      "ul#results",
+      state.searchResults.map(result =>
+        h(
+          "li",
+          h(
+            "a",
+            { on: { click: handleClick }, attrs: { href: result } },
+            result
+          )
+        )
+      )
+    ),
+    h("ul#graph", state.clickedResults.map(result => h("li", result)))
+  ]);
+}
+
+let vnode = patch(preview, view(state));
 
 async function getLibDocs(libName) {
   const url = `libs/${libName}.json`;
@@ -35,10 +77,8 @@ function init(data) {
   const emptyResults = searchText.filter(text => text.length < 1).constant([]);
 
   merge(results, emptyResults).observe(resultContent => {
-    resultList.innerHTML = resultContent.reduce(
-      (html, item) => html + template.replace(/\{name\}/g, item.name),
-      ""
-    );
+    state.searchResults = resultContent.map(result => result.name);
+    render();
   });
 }
 
