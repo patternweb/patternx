@@ -61,3 +61,4 @@ dist/
 
 public/**/*.min.json
 public/libs/typescript.json
+tools/*.js
