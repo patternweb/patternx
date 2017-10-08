@@ -1,6 +1,14 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es6"
-  }
+    "target": "es6",
+    "sourceMap": false,
+    "declaration": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "noUnusedLocals": false
+  },
+  "files": [
+    "tools/docgen.ts"
+  ]
 }
