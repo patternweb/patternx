@@ -32,6 +32,9 @@ function view({ searchResults, clickedResults }) {
   return h("div", [
     h(
       "ul#results",
+      {
+        attrs: { tabindex: 1 }
+      },
       state.searchResults.map(result =>
         h(
           "li",
