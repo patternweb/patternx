@@ -21,6 +21,7 @@ function handleClick(event) {
   event.preventDefault();
   state.clickedResults.push(event.target.innerHTML);
   render();
+  search.focus();
 }
 
 function render() {
