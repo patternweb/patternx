@@ -58,3 +58,5 @@ typings/
 .env
 
 dist/
+
+public/**/*.min.json
