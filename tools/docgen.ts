@@ -7,6 +7,7 @@ interface DocEntry {
   extends?: string;
   documentation?: string;
   type?: string;
+  required?: boolean;
   constructors?: DocEntry[];
   parameters?: DocEntry[];
   properties?: DocEntry[];
@@ -144,8 +145,9 @@ function generateDocumentation(
 
   /** Serialize a symbol into a json object */
   function serializeSymbol(symbol: ts.Symbol): DocEntry {
+    const name = symbol.getName() + (symbol.declarations[0].questionToken ? "?" : "")
     const _symbol: DocEntry = {
-      name: symbol.getName(),
+      name,
       type: checker.typeToString(
         checker.getTypeOfSymbolAtLocation(symbol, symbol.valueDeclaration)
       )

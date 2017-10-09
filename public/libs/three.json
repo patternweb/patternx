@@ -147,15 +147,15 @@
       {
         "parameters": [
           {
-            "name": "name",
+            "name": "name?",
             "type": "string"
           },
           {
-            "name": "duration",
+            "name": "duration?",
             "type": "number"
           },
           {
-            "name": "tracks",
+            "name": "tracks?",
             "type": "KeyframeTrack[]"
           }
         ],
@@ -415,7 +415,7 @@
             "type": "string"
           },
           {
-            "name": "parsedPath",
+            "name": "parsedPath?",
             "type": "any"
           }
         ],
@@ -490,7 +490,7 @@
             "type": "any"
           },
           {
-            "name": "parsedPath",
+            "name": "parsedPath?",
             "type": "any"
           }
         ],
@@ -795,15 +795,15 @@
       {
         "parameters": [
           {
-            "name": "near",
+            "name": "near?",
             "type": "number"
           },
           {
-            "name": "far",
+            "name": "far?",
             "type": "number"
           },
           {
-            "name": "cubeResolution",
+            "name": "cubeResolution?",
             "type": "number"
           }
         ],
@@ -851,12 +851,12 @@
             "documentation": "Camera frustum bottom plane."
           },
           {
-            "name": "near",
+            "name": "near?",
             "type": "number",
             "documentation": "Camera frustum near plane."
           },
           {
-            "name": "far",
+            "name": "far?",
             "type": "number",
             "documentation": "Camera frustum far plane."
           }
@@ -932,22 +932,22 @@
       {
         "parameters": [
           {
-            "name": "fov",
+            "name": "fov?",
             "type": "number",
             "documentation": "Camera frustum vertical field of view. Default value is 50."
           },
           {
-            "name": "aspect",
+            "name": "aspect?",
             "type": "number",
             "documentation": "Camera frustum aspect ratio. Default value is 1."
           },
           {
-            "name": "near",
+            "name": "near?",
             "type": "number",
             "documentation": "Camera frustum near plane. Default value is 0.1."
           },
           {
-            "name": "far",
+            "name": "far?",
             "type": "number",
             "documentation": "Camera frustum far plane. Default value is 2000."
           }
@@ -1090,7 +1090,7 @@
             "type": "number"
           },
           {
-            "name": "normalized",
+            "name": "normalized?",
             "type": "boolean"
           }
         ],
@@ -1623,7 +1623,7 @@
             "type": "number"
           },
           {
-            "name": "normalized",
+            "name": "normalized?",
             "type": "boolean"
           }
         ],
@@ -1846,7 +1846,7 @@
       {
         "parameters": [
           {
-            "name": "autoStart",
+            "name": "autoStart?",
             "type": "boolean",
             "documentation": "Automatically start the clock."
           }
@@ -2106,17 +2106,17 @@
             "documentation": "Vertex C index."
           },
           {
-            "name": "normal",
+            "name": "normal?",
             "type": "Vector3",
             "documentation": "Face normal or array of vertex normals."
           },
           {
-            "name": "color",
+            "name": "color?",
             "type": "Color",
             "documentation": "Face color or array of vertex colors."
           },
           {
-            "name": "materialIndex",
+            "name": "materialIndex?",
             "type": "number",
             "documentation": "Material index."
           }
@@ -2138,15 +2138,15 @@
             "type": "number"
           },
           {
-            "name": "normal",
+            "name": "normal?",
             "type": "Vector3"
           },
           {
-            "name": "vertexColors",
+            "name": "vertexColors?",
             "type": "Color[]"
           },
           {
-            "name": "materialIndex",
+            "name": "materialIndex?",
             "type": "number"
           }
         ],
@@ -2167,15 +2167,15 @@
             "type": "number"
           },
           {
-            "name": "vertexNormals",
+            "name": "vertexNormals?",
             "type": "Vector3[]"
           },
           {
-            "name": "color",
+            "name": "color?",
             "type": "Color"
           },
           {
-            "name": "materialIndex",
+            "name": "materialIndex?",
             "type": "number"
           }
         ],
@@ -2196,15 +2196,15 @@
             "type": "number"
           },
           {
-            "name": "vertexNormals",
+            "name": "vertexNormals?",
             "type": "Vector3[]"
           },
           {
-            "name": "vertexColors",
+            "name": "vertexColors?",
             "type": "Color[]"
           },
           {
-            "name": "materialIndex",
+            "name": "materialIndex?",
             "type": "number"
           }
         ],
@@ -2286,17 +2286,17 @@
             "documentation": "Vertex C index."
           },
           {
-            "name": "normal",
+            "name": "normal?",
             "type": "Vector3",
             "documentation": "Face normal or array of vertex normals."
           },
           {
-            "name": "color",
+            "name": "color?",
             "type": "Color",
             "documentation": "Face color or array of vertex colors."
           },
           {
-            "name": "materialIndex",
+            "name": "materialIndex?",
             "type": "number",
             "documentation": "Material index."
           }
@@ -2318,15 +2318,15 @@
             "type": "number"
           },
           {
-            "name": "normal",
+            "name": "normal?",
             "type": "Vector3"
           },
           {
-            "name": "vertexColors",
+            "name": "vertexColors?",
             "type": "Color[]"
           },
           {
-            "name": "materialIndex",
+            "name": "materialIndex?",
             "type": "number"
           }
         ],
@@ -2347,15 +2347,15 @@
             "type": "number"
           },
           {
-            "name": "vertexNormals",
+            "name": "vertexNormals?",
             "type": "Vector3[]"
           },
           {
-            "name": "color",
+            "name": "color?",
             "type": "Color"
           },
           {
-            "name": "materialIndex",
+            "name": "materialIndex?",
             "type": "number"
           }
         ],
@@ -2376,15 +2376,15 @@
             "type": "number"
           },
           {
-            "name": "vertexNormals",
+            "name": "vertexNormals?",
             "type": "Vector3[]"
           },
           {
-            "name": "vertexColors",
+            "name": "vertexColors?",
             "type": "Color[]"
           },
           {
-            "name": "materialIndex",
+            "name": "materialIndex?",
             "type": "number"
           }
         ],
@@ -2703,7 +2703,7 @@
             "type": "number"
           },
           {
-            "name": "meshPerAttribute",
+            "name": "meshPerAttribute?",
             "type": "number"
           }
         ],
@@ -2833,7 +2833,7 @@
             "type": "number"
           },
           {
-            "name": "meshPerAttribute",
+            "name": "meshPerAttribute?",
             "type": "number"
           }
         ],
@@ -3297,21 +3297,21 @@
     "constructors": [],
     "properties": [
       {
-        "name": "Line",
+        "name": "Line?",
         "type": "any"
       },
       {
-        "name": "LOD",
+        "name": "LOD?",
         "type": "any"
       },
       {
-        "name": "Sprite",
+        "name": "Sprite?",
         "type": "any"
       }
     ],
     "methods": [
       {
-        "name": "Points",
+        "name": "Points?",
         "type": "{ threshold: number; }"
       }
     ]
@@ -3323,19 +3323,19 @@
       {
         "parameters": [
           {
-            "name": "origin",
+            "name": "origin?",
             "type": "Vector3"
           },
           {
-            "name": "direction",
+            "name": "direction?",
             "type": "Vector3"
           },
           {
-            "name": "near",
+            "name": "near?",
             "type": "number"
           },
           {
-            "name": "far",
+            "name": "far?",
             "type": "number"
           }
         ],
@@ -3459,11 +3459,11 @@
       {
         "parameters": [
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "string | number"
           },
           {
-            "name": "intensity",
+            "name": "intensity?",
             "type": "number"
           }
         ],
@@ -3594,12 +3594,12 @@
         "documentation": "This creates a Ambientlight with a color.",
         "parameters": [
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "string | number",
             "documentation": "Numeric value of the RGB component of the color."
           },
           {
-            "name": "intensity",
+            "name": "intensity?",
             "type": "number"
           }
         ],
@@ -3622,11 +3622,11 @@
       {
         "parameters": [
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "string | number"
           },
           {
-            "name": "intensity",
+            "name": "intensity?",
             "type": "number"
           }
         ],
@@ -3675,15 +3675,15 @@
       {
         "parameters": [
           {
-            "name": "skyColorHex",
+            "name": "skyColorHex?",
             "type": "string | number"
           },
           {
-            "name": "groundColorHex",
+            "name": "groundColorHex?",
             "type": "string | number"
           },
           {
-            "name": "intensity",
+            "name": "intensity?",
             "type": "number"
           }
         ],
@@ -3710,19 +3710,19 @@
       {
         "parameters": [
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "string | number"
           },
           {
-            "name": "intensity",
+            "name": "intensity?",
             "type": "number"
           },
           {
-            "name": "distance",
+            "name": "distance?",
             "type": "number"
           },
           {
-            "name": "decay",
+            "name": "decay?",
             "type": "number"
           }
         ],
@@ -3779,27 +3779,27 @@
       {
         "parameters": [
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "string | number"
           },
           {
-            "name": "intensity",
+            "name": "intensity?",
             "type": "number"
           },
           {
-            "name": "distance",
+            "name": "distance?",
             "type": "number"
           },
           {
-            "name": "angle",
+            "name": "angle?",
             "type": "number"
           },
           {
-            "name": "exponent",
+            "name": "exponent?",
             "type": "number"
           },
           {
-            "name": "decay",
+            "name": "decay?",
             "type": "number"
           }
         ],
@@ -3944,7 +3944,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4003,7 +4003,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4035,7 +4035,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4088,7 +4088,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4128,15 +4128,15 @@
       {
         "parameters": [
           {
-            "name": "onLoad",
+            "name": "onLoad?",
             "type": "() => void"
           },
           {
-            "name": "onProgress",
+            "name": "onProgress?",
             "type": "(url: string, loaded: number, total: number) => void"
           },
           {
-            "name": "onError",
+            "name": "onError?",
             "type": "() => void"
           }
         ],
@@ -4185,7 +4185,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4216,7 +4216,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4259,7 +4259,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4331,7 +4331,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4383,7 +4383,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4426,7 +4426,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4453,7 +4453,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4470,7 +4470,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4505,7 +4505,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -4526,129 +4526,129 @@
     "constructors": [],
     "properties": [
       {
-        "name": "blendDst",
+        "name": "blendDst?",
         "type": "BlendingDstFactor"
       },
       {
-        "name": "blendDstAlpha",
+        "name": "blendDstAlpha?",
         "type": "number"
       },
       {
-        "name": "blendEquation",
+        "name": "blendEquation?",
         "type": "BlendingEquation"
       },
       {
-        "name": "blendEquationAlpha",
+        "name": "blendEquationAlpha?",
         "type": "number"
       },
       {
-        "name": "blending",
+        "name": "blending?",
         "type": "Blending"
       },
       {
-        "name": "blendSrcAlpha",
+        "name": "blendSrcAlpha?",
         "type": "number"
       },
       {
-        "name": "clipIntersection",
+        "name": "clipIntersection?",
         "type": "boolean"
       },
       {
-        "name": "clipShadows",
+        "name": "clipShadows?",
         "type": "boolean"
       },
       {
-        "name": "colorWrite",
+        "name": "colorWrite?",
         "type": "boolean"
       },
       {
-        "name": "depthFunc",
+        "name": "depthFunc?",
         "type": "DepthModes"
       },
       {
-        "name": "depthTest",
+        "name": "depthTest?",
         "type": "boolean"
       },
       {
-        "name": "depthWrite",
+        "name": "depthWrite?",
         "type": "boolean"
       },
       {
-        "name": "fog",
+        "name": "fog?",
         "type": "boolean"
       },
       {
-        "name": "lights",
+        "name": "lights?",
         "type": "boolean"
       },
       {
-        "name": "name",
+        "name": "name?",
         "type": "string"
       },
       {
-        "name": "opacity",
+        "name": "opacity?",
         "type": "number"
       },
       {
-        "name": "overdraw",
+        "name": "overdraw?",
         "type": "number"
       },
       {
-        "name": "polygonOffset",
+        "name": "polygonOffset?",
         "type": "boolean"
       },
       {
-        "name": "polygonOffsetFactor",
+        "name": "polygonOffsetFactor?",
         "type": "number"
       },
       {
-        "name": "polygonOffsetUnits",
+        "name": "polygonOffsetUnits?",
         "type": "number"
       },
       {
-        "name": "premultipliedAlpha",
+        "name": "premultipliedAlpha?",
         "type": "boolean"
       },
       {
-        "name": "dithering",
+        "name": "dithering?",
         "type": "boolean"
       },
       {
-        "name": "flatShading",
+        "name": "flatShading?",
         "type": "boolean"
       },
       {
-        "name": "side",
+        "name": "side?",
         "type": "Side"
       },
       {
-        "name": "transparent",
+        "name": "transparent?",
         "type": "boolean"
       },
       {
-        "name": "vertexColors",
+        "name": "vertexColors?",
         "type": "Colors"
       },
       {
-        "name": "visible",
+        "name": "visible?",
         "type": "boolean"
       },
       {
-        "name": "shading",
+        "name": "shading?",
         "type": "Shading"
       }
     ],
     "methods": [
       {
-        "name": "blendSrc",
+        "name": "blendSrc?",
         "type": "BlendingDstFactor | BlendingSrcFactor"
       },
       {
-        "name": "clippingPlanes",
+        "name": "clippingPlanes?",
         "type": "Plane[]"
       },
       {
-        "name": "precision",
+        "name": "precision?",
         "type": "\"highp\" | \"mediump\" | \"lowp\""
       }
     ]
@@ -4896,15 +4896,15 @@
     "constructors": [],
     "properties": [
       {
-        "name": "linewidth",
+        "name": "linewidth?",
         "type": "number"
       },
       {
-        "name": "linecap",
+        "name": "linecap?",
         "type": "string"
       },
       {
-        "name": "linejoin",
+        "name": "linejoin?",
         "type": "string"
       }
     ],
@@ -4917,7 +4917,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "LineBasicMaterialParameters"
           }
         ],
@@ -4955,19 +4955,19 @@
     "constructors": [],
     "properties": [
       {
-        "name": "linewidth",
+        "name": "linewidth?",
         "type": "number"
       },
       {
-        "name": "scale",
+        "name": "scale?",
         "type": "number"
       },
       {
-        "name": "dashSize",
+        "name": "dashSize?",
         "type": "number"
       },
       {
-        "name": "gapSize",
+        "name": "gapSize?",
         "type": "number"
       }
     ],
@@ -4980,7 +4980,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "LineDashedMaterialParameters"
           }
         ],
@@ -5023,71 +5023,71 @@
     "constructors": [],
     "properties": [
       {
-        "name": "opacity",
+        "name": "opacity?",
         "type": "number"
       },
       {
-        "name": "map",
+        "name": "map?",
         "type": "Texture"
       },
       {
-        "name": "aoMap",
+        "name": "aoMap?",
         "type": "Texture"
       },
       {
-        "name": "aoMapIntensity",
+        "name": "aoMapIntensity?",
         "type": "number"
       },
       {
-        "name": "specularMap",
+        "name": "specularMap?",
         "type": "Texture"
       },
       {
-        "name": "alphaMap",
+        "name": "alphaMap?",
         "type": "Texture"
       },
       {
-        "name": "envMap",
+        "name": "envMap?",
         "type": "Texture"
       },
       {
-        "name": "combine",
+        "name": "combine?",
         "type": "Combine"
       },
       {
-        "name": "reflectivity",
+        "name": "reflectivity?",
         "type": "number"
       },
       {
-        "name": "refractionRatio",
+        "name": "refractionRatio?",
         "type": "number"
       },
       {
-        "name": "shading",
+        "name": "shading?",
         "type": "Shading"
       },
       {
-        "name": "wireframe",
+        "name": "wireframe?",
         "type": "boolean"
       },
       {
-        "name": "wireframeLinewidth",
+        "name": "wireframeLinewidth?",
         "type": "number"
       },
       {
-        "name": "wireframeLinecap",
+        "name": "wireframeLinecap?",
         "type": "string"
       },
       {
-        "name": "wireframeLinejoin",
+        "name": "wireframeLinejoin?",
         "type": "string"
       },
       {
-        "name": "skinning",
+        "name": "skinning?",
         "type": "boolean"
       },
       {
-        "name": "morphTargets",
+        "name": "morphTargets?",
         "type": "boolean"
       }
     ],
@@ -5100,7 +5100,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "MeshBasicMaterialParameters"
           }
         ],
@@ -5190,7 +5190,7 @@
     "constructors": [],
     "properties": [
       {
-        "name": "wireframeLinewidth",
+        "name": "wireframeLinewidth?",
         "type": "number"
       }
     ],
@@ -5203,7 +5203,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "MeshDepthMaterialParameters"
           }
         ],
@@ -5233,89 +5233,89 @@
     "constructors": [],
     "properties": [
       {
-        "name": "emissiveIntensity",
+        "name": "emissiveIntensity?",
         "type": "number"
       },
       {
-        "name": "emissiveMap",
+        "name": "emissiveMap?",
         "type": "Texture"
       },
       {
-        "name": "map",
+        "name": "map?",
         "type": "Texture"
       },
       {
-        "name": "lightMap",
+        "name": "lightMap?",
         "type": "Texture"
       },
       {
-        "name": "lightMapIntensity",
+        "name": "lightMapIntensity?",
         "type": "number"
       },
       {
-        "name": "aoMap",
+        "name": "aoMap?",
         "type": "Texture"
       },
       {
-        "name": "aoMapIntensity",
+        "name": "aoMapIntensity?",
         "type": "number"
       },
       {
-        "name": "specularMap",
+        "name": "specularMap?",
         "type": "Texture"
       },
       {
-        "name": "alphaMap",
+        "name": "alphaMap?",
         "type": "Texture"
       },
       {
-        "name": "envMap",
+        "name": "envMap?",
         "type": "Texture"
       },
       {
-        "name": "combine",
+        "name": "combine?",
         "type": "Combine"
       },
       {
-        "name": "reflectivity",
+        "name": "reflectivity?",
         "type": "number"
       },
       {
-        "name": "refractionRatio",
+        "name": "refractionRatio?",
         "type": "number"
       },
       {
-        "name": "wireframe",
+        "name": "wireframe?",
         "type": "boolean"
       },
       {
-        "name": "wireframeLinewidth",
+        "name": "wireframeLinewidth?",
         "type": "number"
       },
       {
-        "name": "wireframeLinecap",
+        "name": "wireframeLinecap?",
         "type": "string"
       },
       {
-        "name": "wireframeLinejoin",
+        "name": "wireframeLinejoin?",
         "type": "string"
       },
       {
-        "name": "skinning",
+        "name": "skinning?",
         "type": "boolean"
       },
       {
-        "name": "morphTargets",
+        "name": "morphTargets?",
         "type": "boolean"
       },
       {
-        "name": "morphNormals",
+        "name": "morphNormals?",
         "type": "boolean"
       }
     ],
     "methods": [
       {
-        "name": "emissive",
+        "name": "emissive?",
         "type": "string | number"
       }
     ]
@@ -5327,7 +5327,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "MeshLambertMaterialParameters"
           }
         ],
@@ -5437,115 +5437,115 @@
     "constructors": [],
     "properties": [
       {
-        "name": "roughness",
+        "name": "roughness?",
         "type": "number"
       },
       {
-        "name": "metalness",
+        "name": "metalness?",
         "type": "number"
       },
       {
-        "name": "map",
+        "name": "map?",
         "type": "Texture"
       },
       {
-        "name": "lightMap",
+        "name": "lightMap?",
         "type": "Texture"
       },
       {
-        "name": "lightMapIntensity",
+        "name": "lightMapIntensity?",
         "type": "number"
       },
       {
-        "name": "aoMap",
+        "name": "aoMap?",
         "type": "Texture"
       },
       {
-        "name": "aoMapIntensity",
+        "name": "aoMapIntensity?",
         "type": "number"
       },
       {
-        "name": "emissive",
+        "name": "emissive?",
         "type": "Color"
       },
       {
-        "name": "emissiveIntensity",
+        "name": "emissiveIntensity?",
         "type": "number"
       },
       {
-        "name": "emissiveMap",
+        "name": "emissiveMap?",
         "type": "Texture"
       },
       {
-        "name": "bumpMap",
+        "name": "bumpMap?",
         "type": "Texture"
       },
       {
-        "name": "bumpScale",
+        "name": "bumpScale?",
         "type": "number"
       },
       {
-        "name": "normalMap",
+        "name": "normalMap?",
         "type": "Texture"
       },
       {
-        "name": "normalScale",
+        "name": "normalScale?",
         "type": "Vector2"
       },
       {
-        "name": "displacementMap",
+        "name": "displacementMap?",
         "type": "Texture"
       },
       {
-        "name": "displacementScale",
+        "name": "displacementScale?",
         "type": "number"
       },
       {
-        "name": "displacementBias",
+        "name": "displacementBias?",
         "type": "number"
       },
       {
-        "name": "roughnessMap",
+        "name": "roughnessMap?",
         "type": "Texture"
       },
       {
-        "name": "metalnessMap",
+        "name": "metalnessMap?",
         "type": "Texture"
       },
       {
-        "name": "alphaMap",
+        "name": "alphaMap?",
         "type": "Texture"
       },
       {
-        "name": "envMap",
+        "name": "envMap?",
         "type": "Texture"
       },
       {
-        "name": "envMapIntensity",
+        "name": "envMapIntensity?",
         "type": "number"
       },
       {
-        "name": "refractionRatio",
+        "name": "refractionRatio?",
         "type": "number"
       },
       {
-        "name": "wireframe",
+        "name": "wireframe?",
         "type": "boolean"
       },
       {
-        "name": "wireframeLinewidth",
+        "name": "wireframeLinewidth?",
         "type": "number"
       },
       {
-        "name": "skinning",
+        "name": "skinning?",
         "type": "boolean"
       },
       {
-        "name": "morphTargets",
+        "name": "morphTargets?",
         "type": "boolean"
       },
       {
-        "name": "morphNormals",
+        "name": "morphNormals?",
         "type": "boolean"
       }
     ],
@@ -5558,7 +5558,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "MeshStandardMaterialParameters"
           }
         ],
@@ -5700,12 +5700,12 @@
     "constructors": [],
     "properties": [
       {
-        "name": "wireframeLinewidth",
+        "name": "wireframeLinewidth?",
         "type": "number",
         "documentation": "Controls wireframe thickness. Default is 1. "
       },
       {
-        "name": "morphTargets",
+        "name": "morphTargets?",
         "type": "boolean"
       }
     ],
@@ -5718,7 +5718,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "MeshNormalMaterialParameters"
           }
         ],
@@ -5752,127 +5752,127 @@
     "constructors": [],
     "properties": [
       {
-        "name": "specular",
+        "name": "specular?",
         "type": "number"
       },
       {
-        "name": "shininess",
+        "name": "shininess?",
         "type": "number"
       },
       {
-        "name": "opacity",
+        "name": "opacity?",
         "type": "number"
       },
       {
-        "name": "map",
+        "name": "map?",
         "type": "Texture"
       },
       {
-        "name": "lightMap",
+        "name": "lightMap?",
         "type": "Texture"
       },
       {
-        "name": "lightMapIntensity",
+        "name": "lightMapIntensity?",
         "type": "number"
       },
       {
-        "name": "aoMap",
+        "name": "aoMap?",
         "type": "Texture"
       },
       {
-        "name": "aoMapIntensity",
+        "name": "aoMapIntensity?",
         "type": "number"
       },
       {
-        "name": "emissive",
+        "name": "emissive?",
         "type": "number"
       },
       {
-        "name": "emissiveIntensity",
+        "name": "emissiveIntensity?",
         "type": "number"
       },
       {
-        "name": "emissiveMap",
+        "name": "emissiveMap?",
         "type": "Texture"
       },
       {
-        "name": "bumpMap",
+        "name": "bumpMap?",
         "type": "Texture"
       },
       {
-        "name": "bumpScale",
+        "name": "bumpScale?",
         "type": "number"
       },
       {
-        "name": "normalMap",
+        "name": "normalMap?",
         "type": "Texture"
       },
       {
-        "name": "normalScale",
+        "name": "normalScale?",
         "type": "Vector2"
       },
       {
-        "name": "displacementMap",
+        "name": "displacementMap?",
         "type": "Texture"
       },
       {
-        "name": "displacementScale",
+        "name": "displacementScale?",
         "type": "number"
       },
       {
-        "name": "displacementBias",
+        "name": "displacementBias?",
         "type": "number"
       },
       {
-        "name": "specularMap",
+        "name": "specularMap?",
         "type": "Texture"
       },
       {
-        "name": "alphaMap",
+        "name": "alphaMap?",
         "type": "Texture"
       },
       {
-        "name": "envMap",
+        "name": "envMap?",
         "type": "Texture"
       },
       {
-        "name": "combine",
+        "name": "combine?",
         "type": "Combine"
       },
       {
-        "name": "reflectivity",
+        "name": "reflectivity?",
         "type": "number"
       },
       {
-        "name": "refractionRatio",
+        "name": "refractionRatio?",
         "type": "number"
       },
       {
-        "name": "wireframe",
+        "name": "wireframe?",
         "type": "boolean"
       },
       {
-        "name": "wireframeLinewidth",
+        "name": "wireframeLinewidth?",
         "type": "number"
       },
       {
-        "name": "wireframeLinecap",
+        "name": "wireframeLinecap?",
         "type": "string"
       },
       {
-        "name": "wireframeLinejoin",
+        "name": "wireframeLinejoin?",
         "type": "string"
       },
       {
-        "name": "skinning",
+        "name": "skinning?",
         "type": "boolean"
       },
       {
-        "name": "morphTargets",
+        "name": "morphTargets?",
         "type": "boolean"
       },
       {
-        "name": "morphNormals",
+        "name": "morphNormals?",
         "type": "boolean"
       }
     ],
@@ -5885,7 +5885,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "MeshPhongMaterialParameters"
           }
         ],
@@ -6035,11 +6035,11 @@
     "constructors": [],
     "properties": [
       {
-        "name": "clearCoat",
+        "name": "clearCoat?",
         "type": "number"
       },
       {
-        "name": "clearCoatRoughness",
+        "name": "clearCoatRoughness?",
         "type": "number"
       }
     ],
@@ -6086,7 +6086,7 @@
       {
         "parameters": [
           {
-            "name": "materials",
+            "name": "materials?",
             "type": "Material[]"
           }
         ],
@@ -6117,7 +6117,7 @@
       {
         "parameters": [
           {
-            "name": "materials",
+            "name": "materials?",
             "type": "Material[]"
           }
         ],
@@ -6133,15 +6133,15 @@
     "constructors": [],
     "properties": [
       {
-        "name": "map",
+        "name": "map?",
         "type": "Texture"
       },
       {
-        "name": "size",
+        "name": "size?",
         "type": "number"
       },
       {
-        "name": "sizeAttenuation",
+        "name": "sizeAttenuation?",
         "type": "boolean"
       }
     ],
@@ -6154,7 +6154,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "PointsMaterialParameters"
           }
         ],
@@ -6193,7 +6193,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "PointsMaterialParameters"
           }
         ],
@@ -6210,7 +6210,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "PointsMaterialParameters"
           }
         ],
@@ -6227,7 +6227,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "PointsMaterialParameters"
           }
         ],
@@ -6243,47 +6243,47 @@
     "constructors": [],
     "properties": [
       {
-        "name": "uniforms",
+        "name": "uniforms?",
         "type": "any"
       },
       {
-        "name": "vertexShader",
+        "name": "vertexShader?",
         "type": "string"
       },
       {
-        "name": "fragmentShader",
+        "name": "fragmentShader?",
         "type": "string"
       },
       {
-        "name": "lineWidth",
+        "name": "lineWidth?",
         "type": "number"
       },
       {
-        "name": "wireframe",
+        "name": "wireframe?",
         "type": "boolean"
       },
       {
-        "name": "wireframeLinewidth",
+        "name": "wireframeLinewidth?",
         "type": "number"
       },
       {
-        "name": "lights",
+        "name": "lights?",
         "type": "boolean"
       },
       {
-        "name": "clipping",
+        "name": "clipping?",
         "type": "boolean"
       },
       {
-        "name": "skinning",
+        "name": "skinning?",
         "type": "boolean"
       },
       {
-        "name": "morphTargets",
+        "name": "morphTargets?",
         "type": "boolean"
       },
       {
-        "name": "morphNormals",
+        "name": "morphNormals?",
         "type": "boolean"
       }
     ],
@@ -6296,7 +6296,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "ShaderMaterialParameters"
           }
         ],
@@ -6387,7 +6387,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "ShaderMaterialParameters"
           }
         ],
@@ -6403,11 +6403,11 @@
     "constructors": [],
     "properties": [
       {
-        "name": "map",
+        "name": "map?",
         "type": "Texture"
       },
       {
-        "name": "rotation",
+        "name": "rotation?",
         "type": "number"
       }
     ],
@@ -6420,7 +6420,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "SpriteMaterialParameters"
           }
         ],
@@ -6455,7 +6455,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "ShaderMaterialParameters"
           }
         ],
@@ -6472,11 +6472,11 @@
       {
         "parameters": [
           {
-            "name": "min",
+            "name": "min?",
             "type": "Vector2"
           },
           {
-            "name": "max",
+            "name": "max?",
             "type": "Vector2"
           }
         ],
@@ -6599,11 +6599,11 @@
       {
         "parameters": [
           {
-            "name": "min",
+            "name": "min?",
             "type": "Vector3"
           },
           {
-            "name": "max",
+            "name": "max?",
             "type": "Vector3"
           }
         ],
@@ -6775,7 +6775,7 @@
       {
         "parameters": [
           {
-            "name": "color",
+            "name": "color?",
             "type": "Color"
           }
         ],
@@ -6784,7 +6784,7 @@
       {
         "parameters": [
           {
-            "name": "color",
+            "name": "color?",
             "type": "string"
           }
         ],
@@ -6793,7 +6793,7 @@
       {
         "parameters": [
           {
-            "name": "color",
+            "name": "color?",
             "type": "number"
           }
         ],
@@ -6964,19 +6964,19 @@
       {
         "parameters": [
           {
-            "name": "x",
+            "name": "x?",
             "type": "number"
           },
           {
-            "name": "y",
+            "name": "y?",
             "type": "number"
           },
           {
-            "name": "z",
+            "name": "z?",
             "type": "number"
           },
           {
-            "name": "order",
+            "name": "order?",
             "type": "string"
           }
         ],
@@ -7064,27 +7064,27 @@
       {
         "parameters": [
           {
-            "name": "p0",
+            "name": "p0?",
             "type": "Plane"
           },
           {
-            "name": "p1",
+            "name": "p1?",
             "type": "Plane"
           },
           {
-            "name": "p2",
+            "name": "p2?",
             "type": "Plane"
           },
           {
-            "name": "p3",
+            "name": "p3?",
             "type": "Plane"
           },
           {
-            "name": "p4",
+            "name": "p4?",
             "type": "Plane"
           },
           {
-            "name": "p5",
+            "name": "p5?",
             "type": "Plane"
           }
         ],
@@ -7139,11 +7139,11 @@
       {
         "parameters": [
           {
-            "name": "start",
+            "name": "start?",
             "type": "Vector3"
           },
           {
-            "name": "end",
+            "name": "end?",
             "type": "Vector3"
           }
         ],
@@ -7583,11 +7583,11 @@
       {
         "parameters": [
           {
-            "name": "normal",
+            "name": "normal?",
             "type": "Vector3"
           },
           {
-            "name": "constant",
+            "name": "constant?",
             "type": "number"
           }
         ],
@@ -7694,15 +7694,15 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "phi",
+            "name": "phi?",
             "type": "number"
           },
           {
-            "name": "theta",
+            "name": "theta?",
             "type": "number"
           }
         ],
@@ -7754,22 +7754,22 @@
       {
         "parameters": [
           {
-            "name": "x",
+            "name": "x?",
             "type": "number",
             "documentation": "x coordinate"
           },
           {
-            "name": "y",
+            "name": "y?",
             "type": "number",
             "documentation": "y coordinate"
           },
           {
-            "name": "z",
+            "name": "z?",
             "type": "number",
             "documentation": "z coordinate"
           },
           {
-            "name": "w",
+            "name": "w?",
             "type": "number",
             "documentation": "w coordinate"
           }
@@ -7908,11 +7908,11 @@
       {
         "parameters": [
           {
-            "name": "origin",
+            "name": "origin?",
             "type": "Vector3"
           },
           {
-            "name": "direction",
+            "name": "direction?",
             "type": "Vector3"
           }
         ],
@@ -8031,11 +8031,11 @@
       {
         "parameters": [
           {
-            "name": "center",
+            "name": "center?",
             "type": "Vector3"
           },
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           }
         ],
@@ -8138,15 +8138,15 @@
       {
         "parameters": [
           {
-            "name": "a",
+            "name": "a?",
             "type": "Vector3"
           },
           {
-            "name": "b",
+            "name": "b?",
             "type": "Vector3"
           },
           {
-            "name": "c",
+            "name": "c?",
             "type": "Vector3"
           }
         ],
@@ -8290,12 +8290,12 @@
         "documentation": "normalize():T;"
       },
       {
-        "name": "distanceTo",
+        "name": "distanceTo?",
         "type": "(v: Vector) => number",
         "documentation": "NOTE: Vector4 doesn't have the property.\r\n\r\ndistanceTo(v:T):number;"
       },
       {
-        "name": "distanceToSquared",
+        "name": "distanceToSquared?",
         "type": "(v: Vector) => number",
         "documentation": "NOTE: Vector4 doesn't have the property.\r\n\r\ndistanceToSquared(v:T):number;"
       },
@@ -8329,11 +8329,11 @@
       {
         "parameters": [
           {
-            "name": "x",
+            "name": "x?",
             "type": "number"
           },
           {
-            "name": "y",
+            "name": "y?",
             "type": "number"
           }
         ],
@@ -8572,15 +8572,15 @@
       {
         "parameters": [
           {
-            "name": "x",
+            "name": "x?",
             "type": "number"
           },
           {
-            "name": "y",
+            "name": "y?",
             "type": "number"
           },
           {
-            "name": "z",
+            "name": "z?",
             "type": "number"
           }
         ],
@@ -8904,15 +8904,15 @@
       {
         "parameters": [
           {
-            "name": "x",
+            "name": "x?",
             "type": "number"
           },
           {
-            "name": "y",
+            "name": "y?",
             "type": "number"
           },
           {
-            "name": "z",
+            "name": "z?",
             "type": "number"
           }
         ],
@@ -8930,19 +8930,19 @@
       {
         "parameters": [
           {
-            "name": "x",
+            "name": "x?",
             "type": "number"
           },
           {
-            "name": "y",
+            "name": "y?",
             "type": "number"
           },
           {
-            "name": "z",
+            "name": "z?",
             "type": "number"
           },
           {
-            "name": "w",
+            "name": "w?",
             "type": "number"
           }
         ],
@@ -9185,7 +9185,7 @@
             "type": "number"
           },
           {
-            "name": "resultBuffer",
+            "name": "resultBuffer?",
             "type": "any"
           }
         ],
@@ -9236,7 +9236,7 @@
             "type": "number"
           },
           {
-            "name": "resultBuffer",
+            "name": "resultBuffer?",
             "type": "any"
           }
         ],
@@ -9270,7 +9270,7 @@
             "type": "number"
           },
           {
-            "name": "resultBuffer",
+            "name": "resultBuffer?",
             "type": "any"
           }
         ],
@@ -9304,7 +9304,7 @@
             "type": "number"
           },
           {
-            "name": "resultBuffer",
+            "name": "resultBuffer?",
             "type": "any"
           }
         ],
@@ -9338,7 +9338,7 @@
             "type": "number"
           },
           {
-            "name": "resultBuffer",
+            "name": "resultBuffer?",
             "type": "any"
           }
         ],
@@ -9481,23 +9481,23 @@
       {
         "parameters": [
           {
-            "name": "texture",
+            "name": "texture?",
             "type": "Texture"
           },
           {
-            "name": "size",
+            "name": "size?",
             "type": "number"
           },
           {
-            "name": "distance",
+            "name": "distance?",
             "type": "number"
           },
           {
-            "name": "blending",
+            "name": "blending?",
             "type": "Blending"
           },
           {
-            "name": "color",
+            "name": "color?",
             "type": "Color"
           }
         ],
@@ -9536,15 +9536,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "LineBasicMaterial | LineDashedMaterial | ShaderMaterial"
           },
           {
-            "name": "mode",
+            "name": "mode?",
             "type": "number"
           }
         ],
@@ -9575,15 +9575,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "LineBasicMaterial | LineDashedMaterial | ShaderMaterial | (LineBasicMaterial | LineDashedMaterial..."
           },
           {
-            "name": "mode",
+            "name": "mode?",
             "type": "number"
           }
         ],
@@ -9600,11 +9600,11 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "Material | Material[]"
           }
         ],
@@ -9652,12 +9652,12 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry",
             "documentation": "An instance of Geometry or BufferGeometry."
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "Material",
             "documentation": "An instance of Material (optional)."
           }
@@ -9691,12 +9691,12 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry",
             "documentation": "An instance of Geometry or BufferGeometry."
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "Material",
             "documentation": "An instance of Material (optional)."
           }
@@ -9714,12 +9714,12 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry",
             "documentation": "An instance of Geometry or BufferGeometry."
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "Material",
             "documentation": "An instance of Material (optional)."
           }
@@ -9741,11 +9741,11 @@
             "type": "Bone[]"
           },
           {
-            "name": "boneInverses",
+            "name": "boneInverses?",
             "type": "Matrix4[]"
           },
           {
-            "name": "useVertexTexture",
+            "name": "useVertexTexture?",
             "type": "boolean"
           }
         ],
@@ -9812,15 +9812,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "MeshBasicMaterial"
           },
           {
-            "name": "useVertexTexture",
+            "name": "useVertexTexture?",
             "type": "boolean"
           }
         ],
@@ -9829,15 +9829,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "MeshDepthMaterial"
           },
           {
-            "name": "useVertexTexture",
+            "name": "useVertexTexture?",
             "type": "boolean"
           }
         ],
@@ -9846,15 +9846,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "MultiMaterial"
           },
           {
-            "name": "useVertexTexture",
+            "name": "useVertexTexture?",
             "type": "boolean"
           }
         ],
@@ -9863,15 +9863,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "MeshLambertMaterial"
           },
           {
-            "name": "useVertexTexture",
+            "name": "useVertexTexture?",
             "type": "boolean"
           }
         ],
@@ -9880,15 +9880,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "MeshNormalMaterial"
           },
           {
-            "name": "useVertexTexture",
+            "name": "useVertexTexture?",
             "type": "boolean"
           }
         ],
@@ -9897,15 +9897,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "MeshPhongMaterial"
           },
           {
-            "name": "useVertexTexture",
+            "name": "useVertexTexture?",
             "type": "boolean"
           }
         ],
@@ -9914,15 +9914,15 @@
       {
         "parameters": [
           {
-            "name": "geometry",
+            "name": "geometry?",
             "type": "BufferGeometry | Geometry"
           },
           {
-            "name": "material",
+            "name": "material?",
             "type": "ShaderMaterial"
           },
           {
-            "name": "useVertexTexture",
+            "name": "useVertexTexture?",
             "type": "boolean"
           }
         ],
@@ -9973,7 +9973,7 @@
       {
         "parameters": [
           {
-            "name": "material",
+            "name": "material?",
             "type": "Material"
           }
         ],
@@ -10004,7 +10004,7 @@
       {
         "parameters": [
           {
-            "name": "material",
+            "name": "material?",
             "type": "Material"
           }
         ],
@@ -10036,51 +10036,51 @@
     "constructors": [],
     "properties": [
       {
-        "name": "precision",
+        "name": "precision?",
         "type": "string",
         "documentation": "shader precision. Can be \"highp\", \"mediump\" or \"lowp\"."
       },
       {
-        "name": "alpha",
+        "name": "alpha?",
         "type": "boolean",
         "documentation": "default is true."
       },
       {
-        "name": "premultipliedAlpha",
+        "name": "premultipliedAlpha?",
         "type": "boolean",
         "documentation": "default is true."
       },
       {
-        "name": "antialias",
+        "name": "antialias?",
         "type": "boolean",
         "documentation": "default is false."
       },
       {
-        "name": "stencil",
+        "name": "stencil?",
         "type": "boolean",
         "documentation": "default is true."
       },
       {
-        "name": "preserveDrawingBuffer",
+        "name": "preserveDrawingBuffer?",
         "type": "boolean",
         "documentation": "default is false."
       },
       {
-        "name": "clearColor",
+        "name": "clearColor?",
         "type": "number",
         "documentation": "default is 0x000000."
       },
       {
-        "name": "clearAlpha",
+        "name": "clearAlpha?",
         "type": "number",
         "documentation": "default is 0."
       },
       {
-        "name": "devicePixelRatio",
+        "name": "devicePixelRatio?",
         "type": "number"
       },
       {
-        "name": "logarithmicDepthBuffer",
+        "name": "logarithmicDepthBuffer?",
         "type": "boolean",
         "documentation": "default is false."
       }
@@ -10096,7 +10096,7 @@
         "documentation": "parameters is an optional object with properties defining the renderer's behaviour. The constructor also accepts no parameters at all. In all cases, it will assume sane defaults when parameters are missing.",
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "WebGLRendererParameters"
           }
         ],
@@ -10520,35 +10520,35 @@
     "constructors": [],
     "properties": [
       {
-        "name": "wrapT",
+        "name": "wrapT?",
         "type": "Wrapping"
       },
       {
-        "name": "magFilter",
+        "name": "magFilter?",
         "type": "TextureFilter"
       },
       {
-        "name": "minFilter",
+        "name": "minFilter?",
         "type": "TextureFilter"
       },
       {
-        "name": "format",
+        "name": "format?",
         "type": "number"
       },
       {
-        "name": "type",
+        "name": "type?",
         "type": "TextureDataType"
       },
       {
-        "name": "anisotropy",
+        "name": "anisotropy?",
         "type": "number"
       },
       {
-        "name": "depthBuffer",
+        "name": "depthBuffer?",
         "type": "boolean"
       },
       {
-        "name": "stencilBuffer",
+        "name": "stencilBuffer?",
         "type": "boolean"
       }
     ],
@@ -10569,7 +10569,7 @@
             "type": "number"
           },
           {
-            "name": "options",
+            "name": "options?",
             "type": "WebGLRenderTargetOptions"
           }
         ],
@@ -10692,7 +10692,7 @@
             "type": "number"
           },
           {
-            "name": "options",
+            "name": "options?",
             "type": "WebGLRenderTargetOptions"
           }
         ],
@@ -10863,7 +10863,7 @@
     "constructors": [],
     "properties": [
       {
-        "name": "logarithmicDepthBuffer",
+        "name": "logarithmicDepthBuffer?",
         "type": "any"
       }
     ],
@@ -11869,11 +11869,11 @@
             "type": "number"
           },
           {
-            "name": "near",
+            "name": "near?",
             "type": "number"
           },
           {
-            "name": "far",
+            "name": "far?",
             "type": "number"
           }
         ],
@@ -11924,7 +11924,7 @@
             "type": "string | number"
           },
           {
-            "name": "density",
+            "name": "density?",
             "type": "number"
           }
         ],
@@ -11964,43 +11964,43 @@
       {
         "parameters": [
           {
-            "name": "image",
+            "name": "image?",
             "type": "HTMLImageElement | HTMLCanvasElement | HTMLVideoElement"
           },
           {
-            "name": "mapping",
+            "name": "mapping?",
             "type": "Mapping"
           },
           {
-            "name": "wrapS",
+            "name": "wrapS?",
             "type": "Wrapping"
           },
           {
-            "name": "wrapT",
+            "name": "wrapT?",
             "type": "Wrapping"
           },
           {
-            "name": "magFilter",
+            "name": "magFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "minFilter",
+            "name": "minFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "format",
+            "name": "format?",
             "type": "PixelFormat"
           },
           {
-            "name": "type",
+            "name": "type?",
             "type": "TextureDataType"
           },
           {
-            "name": "anisotropy",
+            "name": "anisotropy?",
             "type": "number"
           },
           {
-            "name": "encoding",
+            "name": "encoding?",
             "type": "TextureEncoding"
           }
         ],
@@ -12143,31 +12143,31 @@
             "type": "number"
           },
           {
-            "name": "type",
+            "name": "type?",
             "type": "TextureDataType"
           },
           {
-            "name": "mapping",
+            "name": "mapping?",
             "type": "Mapping"
           },
           {
-            "name": "wrapS",
+            "name": "wrapS?",
             "type": "Wrapping"
           },
           {
-            "name": "wrapT",
+            "name": "wrapT?",
             "type": "Wrapping"
           },
           {
-            "name": "magFilter",
+            "name": "magFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "minFilter",
+            "name": "minFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "anisotropy",
+            "name": "anisotropy?",
             "type": "number"
           }
         ],
@@ -12193,35 +12193,35 @@
             "type": "HTMLImageElement | HTMLCanvasElement | HTMLVideoElement"
           },
           {
-            "name": "mapping",
+            "name": "mapping?",
             "type": "Mapping"
           },
           {
-            "name": "wrapS",
+            "name": "wrapS?",
             "type": "Wrapping"
           },
           {
-            "name": "wrapT",
+            "name": "wrapT?",
             "type": "Wrapping"
           },
           {
-            "name": "magFilter",
+            "name": "magFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "minFilter",
+            "name": "minFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "format",
+            "name": "format?",
             "type": "PixelFormat"
           },
           {
-            "name": "type",
+            "name": "type?",
             "type": "TextureDataType"
           },
           {
-            "name": "anisotropy",
+            "name": "anisotropy?",
             "type": "number"
           }
         ],
@@ -12238,43 +12238,43 @@
       {
         "parameters": [
           {
-            "name": "images",
+            "name": "images?",
             "type": "any[]"
           },
           {
-            "name": "mapping",
+            "name": "mapping?",
             "type": "Mapping"
           },
           {
-            "name": "wrapS",
+            "name": "wrapS?",
             "type": "Wrapping"
           },
           {
-            "name": "wrapT",
+            "name": "wrapT?",
             "type": "Wrapping"
           },
           {
-            "name": "magFilter",
+            "name": "magFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "minFilter",
+            "name": "minFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "format",
+            "name": "format?",
             "type": "PixelFormat"
           },
           {
-            "name": "type",
+            "name": "type?",
             "type": "TextureDataType"
           },
           {
-            "name": "anisotropy",
+            "name": "anisotropy?",
             "type": "number"
           },
           {
-            "name": "encoding",
+            "name": "encoding?",
             "type": "TextureEncoding"
           }
         ],
@@ -12308,39 +12308,39 @@
             "type": "number"
           },
           {
-            "name": "format",
+            "name": "format?",
             "type": "PixelFormat"
           },
           {
-            "name": "type",
+            "name": "type?",
             "type": "TextureDataType"
           },
           {
-            "name": "mapping",
+            "name": "mapping?",
             "type": "Mapping"
           },
           {
-            "name": "wrapS",
+            "name": "wrapS?",
             "type": "Wrapping"
           },
           {
-            "name": "wrapT",
+            "name": "wrapT?",
             "type": "Wrapping"
           },
           {
-            "name": "magFilter",
+            "name": "magFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "minFilter",
+            "name": "minFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "anisotropy",
+            "name": "anisotropy?",
             "type": "number"
           },
           {
-            "name": "encoding",
+            "name": "encoding?",
             "type": "TextureEncoding"
           }
         ],
@@ -12374,39 +12374,39 @@
             "type": "number"
           },
           {
-            "name": "format",
+            "name": "format?",
             "type": "PixelFormat"
           },
           {
-            "name": "type",
+            "name": "type?",
             "type": "TextureDataType"
           },
           {
-            "name": "mapping",
+            "name": "mapping?",
             "type": "Mapping"
           },
           {
-            "name": "wrapS",
+            "name": "wrapS?",
             "type": "Wrapping"
           },
           {
-            "name": "wrapT",
+            "name": "wrapT?",
             "type": "Wrapping"
           },
           {
-            "name": "magFilter",
+            "name": "magFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "minFilter",
+            "name": "minFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "anisotropy",
+            "name": "anisotropy?",
             "type": "number"
           },
           {
-            "name": "encoding",
+            "name": "encoding?",
             "type": "TextureEncoding"
           }
         ],
@@ -12432,35 +12432,35 @@
             "type": "HTMLVideoElement"
           },
           {
-            "name": "mapping",
+            "name": "mapping?",
             "type": "Mapping"
           },
           {
-            "name": "wrapS",
+            "name": "wrapS?",
             "type": "Wrapping"
           },
           {
-            "name": "wrapT",
+            "name": "wrapT?",
             "type": "Wrapping"
           },
           {
-            "name": "magFilter",
+            "name": "magFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "minFilter",
+            "name": "minFilter?",
             "type": "TextureFilter"
           },
           {
-            "name": "format",
+            "name": "format?",
             "type": "PixelFormat"
           },
           {
-            "name": "type",
+            "name": "type?",
             "type": "TextureDataType"
           },
           {
-            "name": "anisotropy",
+            "name": "anisotropy?",
             "type": "number"
           }
         ],
@@ -12951,7 +12951,7 @@
       {
         "parameters": [
           {
-            "name": "points",
+            "name": "points?",
             "type": "Vector2[]"
           }
         ],
@@ -13060,7 +13060,7 @@
       {
         "parameters": [
           {
-            "name": "points",
+            "name": "points?",
             "type": "Vector2[]"
           }
         ],
@@ -13102,7 +13102,7 @@
       {
         "parameters": [
           {
-            "name": "points",
+            "name": "points?",
             "type": "Vector3[]"
           }
         ],
@@ -13486,7 +13486,7 @@
       {
         "parameters": [
           {
-            "name": "points",
+            "name": "points?",
             "type": "Vector2[]"
           }
         ],
@@ -13520,15 +13520,15 @@
             "type": "number"
           },
           {
-            "name": "widthSegments",
+            "name": "widthSegments?",
             "type": "number"
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number"
           },
           {
-            "name": "depthSegments",
+            "name": "depthSegments?",
             "type": "number"
           }
         ],
@@ -13566,17 +13566,17 @@
             "documentation": "— Depth of the sides on the Z axis."
           },
           {
-            "name": "widthSegments",
+            "name": "widthSegments?",
             "type": "number",
             "documentation": "— Number of segmented faces along the width of the sides."
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number",
             "documentation": "— Number of segmented faces along the height of the sides."
           },
           {
-            "name": "depthSegments",
+            "name": "depthSegments?",
             "type": "number",
             "documentation": "— Number of segmented faces along the depth of the sides."
           }
@@ -13614,17 +13614,17 @@
             "documentation": "— Depth of the sides on the Z axis."
           },
           {
-            "name": "widthSegments",
+            "name": "widthSegments?",
             "type": "number",
             "documentation": "— Number of segmented faces along the width of the sides."
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number",
             "documentation": "— Number of segmented faces along the height of the sides."
           },
           {
-            "name": "depthSegments",
+            "name": "depthSegments?",
             "type": "number",
             "documentation": "— Number of segmented faces along the depth of the sides."
           }
@@ -13642,19 +13642,19 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "segments",
+            "name": "segments?",
             "type": "number"
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -13676,19 +13676,19 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "segments",
+            "name": "segments?",
             "type": "number"
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -13710,35 +13710,35 @@
       {
         "parameters": [
           {
-            "name": "radiusTop",
+            "name": "radiusTop?",
             "type": "number"
           },
           {
-            "name": "radiusBottom",
+            "name": "radiusBottom?",
             "type": "number"
           },
           {
-            "name": "height",
+            "name": "height?",
             "type": "number"
           },
           {
-            "name": "radialSegments",
+            "name": "radialSegments?",
             "type": "number"
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number"
           },
           {
-            "name": "openEnded",
+            "name": "openEnded?",
             "type": "boolean"
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -13760,41 +13760,41 @@
       {
         "parameters": [
           {
-            "name": "radiusTop",
+            "name": "radiusTop?",
             "type": "number",
             "documentation": "— Radius of the cylinder at the top."
           },
           {
-            "name": "radiusBottom",
+            "name": "radiusBottom?",
             "type": "number",
             "documentation": "— Radius of the cylinder at the bottom."
           },
           {
-            "name": "height",
+            "name": "height?",
             "type": "number",
             "documentation": "— Height of the cylinder."
           },
           {
-            "name": "radiusSegments",
+            "name": "radiusSegments?",
             "type": "number",
             "documentation": "— Number of segmented faces around the circumference of the cylinder."
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number",
             "documentation": "— Number of rows of faces along the height of the cylinder."
           },
           {
-            "name": "openEnded",
+            "name": "openEnded?",
             "type": "boolean",
             "documentation": "- A Boolean indicating whether or not to cap the ends of the cylinder."
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -13816,31 +13816,31 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "height",
+            "name": "height?",
             "type": "number"
           },
           {
-            "name": "radialSegment",
+            "name": "radialSegment?",
             "type": "number"
           },
           {
-            "name": "heightSegment",
+            "name": "heightSegment?",
             "type": "number"
           },
           {
-            "name": "openEnded",
+            "name": "openEnded?",
             "type": "boolean"
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -13857,31 +13857,31 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "height",
+            "name": "height?",
             "type": "number"
           },
           {
-            "name": "radialSegment",
+            "name": "radialSegment?",
             "type": "number"
           },
           {
-            "name": "heightSegment",
+            "name": "heightSegment?",
             "type": "number"
           },
           {
-            "name": "openEnded",
+            "name": "openEnded?",
             "type": "boolean"
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -13945,11 +13945,11 @@
       {
         "parameters": [
           {
-            "name": "shape",
+            "name": "shape?",
             "type": "Shape"
           },
           {
-            "name": "options",
+            "name": "options?",
             "type": "any"
           }
         ],
@@ -13958,11 +13958,11 @@
       {
         "parameters": [
           {
-            "name": "shapes",
+            "name": "shapes?",
             "type": "Shape[]"
           },
           {
-            "name": "options",
+            "name": "options?",
             "type": "any"
           }
         ],
@@ -14013,15 +14013,15 @@
             "type": "Vector3[]"
           },
           {
-            "name": "segments",
+            "name": "segments?",
             "type": "number"
           },
           {
-            "name": "phiStart",
+            "name": "phiStart?",
             "type": "number"
           },
           {
-            "name": "phiLength",
+            "name": "phiLength?",
             "type": "number"
           }
         ],
@@ -14047,15 +14047,15 @@
             "type": "Vector3[]"
           },
           {
-            "name": "segments",
+            "name": "segments?",
             "type": "number"
           },
           {
-            "name": "phiStart",
+            "name": "phiStart?",
             "type": "number"
           },
           {
-            "name": "phiLength",
+            "name": "phiLength?",
             "type": "number"
           }
         ],
@@ -14136,11 +14136,11 @@
             "type": "number"
           },
           {
-            "name": "widthSegments",
+            "name": "widthSegments?",
             "type": "number"
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number"
           }
         ],
@@ -14170,11 +14170,11 @@
             "type": "number"
           },
           {
-            "name": "widthSegments",
+            "name": "widthSegments?",
             "type": "number"
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number"
           }
         ],
@@ -14204,11 +14204,11 @@
             "type": "number[]"
           },
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "detail",
+            "name": "detail?",
             "type": "number"
           }
         ],
@@ -14235,27 +14235,27 @@
       {
         "parameters": [
           {
-            "name": "innerRadius",
+            "name": "innerRadius?",
             "type": "number"
           },
           {
-            "name": "outerRadius",
+            "name": "outerRadius?",
             "type": "number"
           },
           {
-            "name": "thetaSegments",
+            "name": "thetaSegments?",
             "type": "number"
           },
           {
-            "name": "phiSegments",
+            "name": "phiSegments?",
             "type": "number"
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -14277,27 +14277,27 @@
       {
         "parameters": [
           {
-            "name": "innerRadius",
+            "name": "innerRadius?",
             "type": "number"
           },
           {
-            "name": "outerRadius",
+            "name": "outerRadius?",
             "type": "number"
           },
           {
-            "name": "thetaSegments",
+            "name": "thetaSegments?",
             "type": "number"
           },
           {
-            "name": "phiSegments",
+            "name": "phiSegments?",
             "type": "number"
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -14323,7 +14323,7 @@
             "type": "Shape"
           },
           {
-            "name": "options",
+            "name": "options?",
             "type": "any"
           }
         ],
@@ -14336,7 +14336,7 @@
             "type": "Shape[]"
           },
           {
-            "name": "options",
+            "name": "options?",
             "type": "any"
           }
         ],
@@ -14366,27 +14366,27 @@
             "type": "number"
           },
           {
-            "name": "widthSegments",
+            "name": "widthSegments?",
             "type": "number"
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number"
           },
           {
-            "name": "phiStart",
+            "name": "phiStart?",
             "type": "number"
           },
           {
-            "name": "phiLength",
+            "name": "phiLength?",
             "type": "number"
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number"
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number"
           }
         ],
@@ -14415,32 +14415,32 @@
             "documentation": "— sphere radius. Default is 50."
           },
           {
-            "name": "widthSegments",
+            "name": "widthSegments?",
             "type": "number",
             "documentation": "— number of horizontal segments. Minimum value is 3, and the default is 8."
           },
           {
-            "name": "heightSegments",
+            "name": "heightSegments?",
             "type": "number",
             "documentation": "— number of vertical segments. Minimum value is 2, and the default is 6."
           },
           {
-            "name": "phiStart",
+            "name": "phiStart?",
             "type": "number",
             "documentation": "— specify horizontal starting angle. Default is 0."
           },
           {
-            "name": "phiLength",
+            "name": "phiLength?",
             "type": "number",
             "documentation": "— specify horizontal sweep angle size. Default is Math.PI * 2."
           },
           {
-            "name": "thetaStart",
+            "name": "thetaStart?",
             "type": "number",
             "documentation": "— specify vertical starting angle. Default is 0."
           },
           {
-            "name": "thetaLength",
+            "name": "thetaLength?",
             "type": "number",
             "documentation": "— specify vertical sweep angle size. Default is Math.PI."
           }
@@ -14463,11 +14463,11 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "detail",
+            "name": "detail?",
             "type": "number"
           }
         ],
@@ -14483,27 +14483,27 @@
     "constructors": [],
     "properties": [
       {
-        "name": "size",
+        "name": "size?",
         "type": "number"
       },
       {
-        "name": "height",
+        "name": "height?",
         "type": "number"
       },
       {
-        "name": "curveSegments",
+        "name": "curveSegments?",
         "type": "number"
       },
       {
-        "name": "bevelEnabled",
+        "name": "bevelEnabled?",
         "type": "boolean"
       },
       {
-        "name": "bevelThickness",
+        "name": "bevelThickness?",
         "type": "number"
       },
       {
-        "name": "bevelSize",
+        "name": "bevelSize?",
         "type": "number"
       }
     ],
@@ -14520,7 +14520,7 @@
             "type": "string"
           },
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "TextGeometryParameters"
           }
         ],
@@ -14542,23 +14542,23 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "tube",
+            "name": "tube?",
             "type": "number"
           },
           {
-            "name": "radialSegments",
+            "name": "radialSegments?",
             "type": "number"
           },
           {
-            "name": "tubularSegments",
+            "name": "tubularSegments?",
             "type": "number"
           },
           {
-            "name": "arc",
+            "name": "arc?",
             "type": "number"
           }
         ],
@@ -14580,23 +14580,23 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "tube",
+            "name": "tube?",
             "type": "number"
           },
           {
-            "name": "radialSegments",
+            "name": "radialSegments?",
             "type": "number"
           },
           {
-            "name": "tubularSegments",
+            "name": "tubularSegments?",
             "type": "number"
           },
           {
-            "name": "arc",
+            "name": "arc?",
             "type": "number"
           }
         ],
@@ -14618,31 +14618,31 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "tube",
+            "name": "tube?",
             "type": "number"
           },
           {
-            "name": "radialSegments",
+            "name": "radialSegments?",
             "type": "number"
           },
           {
-            "name": "tubularSegments",
+            "name": "tubularSegments?",
             "type": "number"
           },
           {
-            "name": "p",
+            "name": "p?",
             "type": "number"
           },
           {
-            "name": "q",
+            "name": "q?",
             "type": "number"
           },
           {
-            "name": "heightScale",
+            "name": "heightScale?",
             "type": "number"
           }
         ],
@@ -14664,31 +14664,31 @@
       {
         "parameters": [
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "tube",
+            "name": "tube?",
             "type": "number"
           },
           {
-            "name": "radialSegments",
+            "name": "radialSegments?",
             "type": "number"
           },
           {
-            "name": "tubularSegments",
+            "name": "tubularSegments?",
             "type": "number"
           },
           {
-            "name": "p",
+            "name": "p?",
             "type": "number"
           },
           {
-            "name": "q",
+            "name": "q?",
             "type": "number"
           },
           {
-            "name": "heightScale",
+            "name": "heightScale?",
             "type": "number"
           }
         ],
@@ -14714,23 +14714,23 @@
             "type": "Curve<Vector3>"
           },
           {
-            "name": "segments",
+            "name": "segments?",
             "type": "number"
           },
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "radiusSegments",
+            "name": "radiusSegments?",
             "type": "number"
           },
           {
-            "name": "closed",
+            "name": "closed?",
             "type": "boolean"
           },
           {
-            "name": "taper",
+            "name": "taper?",
             "type": "(u: number) => number"
           }
         ],
@@ -14768,19 +14768,19 @@
             "type": "Curve<Vector3>"
           },
           {
-            "name": "segments",
+            "name": "segments?",
             "type": "number"
           },
           {
-            "name": "radius",
+            "name": "radius?",
             "type": "number"
           },
           {
-            "name": "radiusSegments",
+            "name": "radiusSegments?",
             "type": "number"
           },
           {
-            "name": "closed",
+            "name": "closed?",
             "type": "boolean"
           }
         ],
@@ -14835,23 +14835,23 @@
             "type": "Vector3"
           },
           {
-            "name": "origin",
+            "name": "origin?",
             "type": "Vector3"
           },
           {
-            "name": "length",
+            "name": "length?",
             "type": "number"
           },
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "number"
           },
           {
-            "name": "headLength",
+            "name": "headLength?",
             "type": "number"
           },
           {
-            "name": "headWidth",
+            "name": "headWidth?",
             "type": "number"
           }
         ],
@@ -14890,7 +14890,7 @@
       {
         "parameters": [
           {
-            "name": "size",
+            "name": "size?",
             "type": "number"
           }
         ],
@@ -14907,11 +14907,11 @@
       {
         "parameters": [
           {
-            "name": "object",
+            "name": "object?",
             "type": "Object3D"
           },
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "number"
           }
         ],
@@ -14942,11 +14942,11 @@
       {
         "parameters": [
           {
-            "name": "object",
+            "name": "object?",
             "type": "Object3D"
           },
           {
-            "name": "color",
+            "name": "color?",
             "type": "Color"
           }
         ],
@@ -15003,7 +15003,7 @@
             "type": "Light"
           },
           {
-            "name": "size",
+            "name": "size?",
             "type": "number"
           }
         ],
@@ -15042,11 +15042,11 @@
             "type": "Object3D"
           },
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "number"
           },
           {
-            "name": "thresholdAngle",
+            "name": "thresholdAngle?",
             "type": "number"
           }
         ],
@@ -15067,15 +15067,15 @@
             "type": "Object3D"
           },
           {
-            "name": "size",
+            "name": "size?",
             "type": "number"
           },
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "number"
           },
           {
-            "name": "linewidth",
+            "name": "linewidth?",
             "type": "number"
           }
         ],
@@ -15114,11 +15114,11 @@
             "type": "number"
           },
           {
-            "name": "color1",
+            "name": "color1?",
             "type": "number | Color"
           },
           {
-            "name": "color2",
+            "name": "color2?",
             "type": "number | Color"
           }
         ],
@@ -15288,15 +15288,15 @@
             "type": "Object3D"
           },
           {
-            "name": "size",
+            "name": "size?",
             "type": "number"
           },
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "number"
           },
           {
-            "name": "linewidth",
+            "name": "linewidth?",
             "type": "number"
           }
         ],
@@ -15331,7 +15331,7 @@
             "type": "Object3D"
           },
           {
-            "name": "hex",
+            "name": "hex?",
             "type": "number"
           }
         ],
@@ -15513,7 +15513,7 @@
     "properties": [],
     "methods": [
       {
-        "name": "program",
+        "name": "program?",
         "type": "(context: CanvasRenderingContext2D, color: Color) => void"
       }
     ]
@@ -15525,7 +15525,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "SpriteCanvasMaterialParameters"
           }
         ],
@@ -15551,11 +15551,11 @@
     "constructors": [],
     "properties": [
       {
-        "name": "devicePixelRatio",
+        "name": "devicePixelRatio?",
         "type": "number"
       },
       {
-        "name": "alpha",
+        "name": "alpha?",
         "type": "boolean"
       }
     ],
@@ -15568,7 +15568,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "CanvasRendererParameters"
           }
         ],
@@ -15869,7 +15869,7 @@
             "type": "Camera"
           },
           {
-            "name": "domElement",
+            "name": "domElement?",
             "type": "HTMLElement"
           }
         ],
@@ -15920,7 +15920,7 @@
             "type": "Shader"
           },
           {
-            "name": "textureID",
+            "name": "textureID?",
             "type": "string"
           }
         ],
@@ -15987,7 +15987,7 @@
             "type": "WebGLRenderer"
           },
           {
-            "name": "renderTarget",
+            "name": "renderTarget?",
             "type": "WebGLRenderTarget"
           }
         ],
@@ -16054,7 +16054,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -16089,7 +16089,7 @@
             "type": "Camera"
           },
           {
-            "name": "domElement",
+            "name": "domElement?",
             "type": "HTMLElement"
           }
         ],
@@ -16308,7 +16308,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -16379,11 +16379,11 @@
       {
         "parameters": [
           {
-            "name": "baseUrl",
+            "name": "baseUrl?",
             "type": "string"
           },
           {
-            "name": "options",
+            "name": "options?",
             "type": "any"
           }
         ],
@@ -16478,7 +16478,7 @@
       {
         "parameters": [
           {
-            "name": "manager",
+            "name": "manager?",
             "type": "LoadingManager"
           }
         ],
@@ -16533,7 +16533,7 @@
       {
         "parameters": [
           {
-            "name": "parameters",
+            "name": "parameters?",
             "type": "any"
           }
         ],
@@ -16611,7 +16611,7 @@
             "type": "Camera"
           },
           {
-            "name": "domElement",
+            "name": "domElement?",
             "type": "HTMLElement"
           }
         ],
@@ -16794,7 +16794,7 @@
             "type": "Camera"
           },
           {
-            "name": "domElement",
+            "name": "domElement?",
             "type": "HTMLElement"
           }
         ],
@@ -17166,15 +17166,15 @@
             "type": "Camera"
           },
           {
-            "name": "overrideMaterial",
+            "name": "overrideMaterial?",
             "type": "Material"
           },
           {
-            "name": "clearColor",
+            "name": "clearColor?",
             "type": "string | number | Color"
           },
           {
-            "name": "clearAlpha",
+            "name": "clearAlpha?",
             "type": "number"
           }
         ],
@@ -17241,7 +17241,7 @@
             "type": "Camera"
           },
           {
-            "name": "domElement",
+            "name": "domElement?",
             "type": "HTMLElement"
           }
         ],
@@ -17376,7 +17376,7 @@
             "type": "Camera"
           },
           {
-            "name": "domElement",
+            "name": "domElement?",
             "type": "HTMLElement"
           }
         ],
@@ -18555,7 +18555,7 @@
             "type": "Camera"
           },
           {
-            "name": "callback",
+            "name": "callback?",
             "type": "(param: string) => void"
           }
         ],
@@ -18595,7 +18595,7 @@
             "type": "Renderer"
           },
           {
-            "name": "callback",
+            "name": "callback?",
             "type": "(params: string) => void"
           }
         ],
