@@ -131,6 +131,15 @@ function parse(codeBlock) {
   return state;
 }
 
+async function getLibDocs(libName) {
+  const url = `libs/${libName}.json`;
+  const response = await fetch(url);
+  const body = await response.json();
+  if (response.status === 200) return body;
+  else throw Error(response.state);
+}
+
 module.exports = {
-  parse
+  parse,
+  getLibDocs
 };

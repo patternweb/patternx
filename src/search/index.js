@@ -7,10 +7,10 @@ const patch = snabbdom.init([
 const h = require("snabbdom/h").default;
 const _ = require("lodash");
 
+import { getLibDocs } from "../code/parser";
 import { fromEvent, skipRepeats, merge } from "most";
 
-const search = document.getElementById("searchbox");
-const preview = document.getElementById("preview");
+const searchbox = document.getElementById("searchbox");
 const MAX_RESULTS = 15;
 
 const state = {
@@ -23,7 +23,7 @@ function handleClick(event) {
   event.preventDefault();
   state.clickedResults.push(event.target.innerHTML);
   render();
-  search.focus();
+  document.getElementById("search").focus();
 }
 
 function handleOver(event) {
@@ -43,6 +43,7 @@ function render() {
 function buildNode(name) {
   const result = state.searchResults.find(res => res.name === name);
   const width = 500;
+  const height = 200;
   if (result) {
     console.log(result);
 
@@ -52,19 +53,20 @@ function buildNode(name) {
       "g.node",
       { attrs: { id: name, transform: `translate(50,100)` } },
       [
+        h("rect", { attrs: { y: -20, width: width, height: height } }),
         h(
           "text.name",
           { attrs: { "text-anchor": "middle", x: width / 2 } },
           result.name
         ),
         ..._.flatMap(result.constructors, c =>
-          h("g.inports", { y: { position } }, [
+          h("g.inports", [
             // add inports for this constructor
             ..._.map(c.parameters, (p, index) => {
               position += 20;
               return h(
                 "text",
-                { attrs: { y: position } },
+                { attrs: { y: position, x: 5 } },
                 `${p.name} <${p.type}>`
               );
             }),
@@ -81,7 +83,7 @@ function buildNode(name) {
         h(
           "text.outport",
           {
-            attrs: { y: 20, x: width }
+            attrs: { y: 20, x: width - 5 }
           },
           result.constructors[0].returnType
         )
@@ -99,6 +101,15 @@ function buildNode(name) {
 
 function view({ searchResults, clickedResults, activeResult }) {
   return h("div", [
+    h("input#search", {
+      attrs: {
+        type: "text",
+        autofocus: true,
+        autocomplete: "off",
+        placeholder: "Add a node...",
+        tabIndex: 0
+      }
+    }),
     h(
       "ul#results",
       {
@@ -127,15 +138,7 @@ function view({ searchResults, clickedResults, activeResult }) {
   ]);
 }
 
-let vnode = patch(preview, view(state));
-
-async function getLibDocs(libName) {
-  const url = `libs/${libName}.json`;
-  const response = await fetch(url);
-  const body = await response.json();
-  if (response.status === 200) return body;
-  else throw Error(response.state);
-}
+let vnode = patch(searchbox, view(state));
 
 const searchData = data => query =>
   data
@@ -145,7 +148,7 @@ const searchData = data => query =>
     .slice(0, MAX_RESULTS);
 
 function init(data) {
-  const searchText = fromEvent("input", search)
+  const searchText = fromEvent("input", document.getElementById("search"))
     .map(e => e.target.value.trim())
     .skipRepeats()
     .multicast();
