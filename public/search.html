@@ -6,17 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="js/search.bundle.js" defer async></script>
   <style>
-    #graph {
+    * {
+      box-sizing: border-box;
+    }
+    #graph, #svg {
       border: 1px solid black;
       width: 400px;
       height: 400px;
+    }
+    text.inport {
+      text-anchor: end;
+    }
+    text.name {
+      text-anchor: end;
     }
   </style>
   <title>Search</title>
 </head>
 <body>
   <form id="search">
-    <input type="text" id="searchbox" autofocus autocomplete="off" placeholder="Add a node..." tabindex="0" />
+    <input type="text" id="searchbox" autofocus="autofocus" autocomplete="off" placeholder="Add a node..." tabindex="0" />
     <div id="preview">
     </div>
   </form>

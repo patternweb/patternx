@@ -50,6 +50,7 @@
     "babylon-walk": "^1.0.2",
     "dagre-layout": "^0.8.0",
     "github-api": "^3.0.0",
+    "lodash": "^4.17.4",
     "most": "^1.7.2",
     "snabbdom": "^0.7.0",
     "snabbdom-to-html": "^3.3.0",

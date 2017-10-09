@@ -5,6 +5,7 @@ const patch = snabbdom.init([
   require("snabbdom/modules/eventlisteners").default
 ]);
 const h = require("snabbdom/h").default;
+const _ = require("lodash");
 
 import { fromEvent, skipRepeats, merge } from "most";
 
@@ -14,6 +15,7 @@ const MAX_RESULTS = 15;
 
 const state = {
   searchResults: [],
+  activeResult: undefined,
   clickedResults: []
 };
 
@@ -24,29 +26,81 @@ function handleClick(event) {
   search.focus();
 }
 
+function handleOver(event) {
+  state.activeResult = event.target.innerHTML;
+  render();
+}
+
+function handleOut(event) {
+  state.activeResult = undefined;
+  render();
+}
+
 function render() {
   vnode = patch(vnode, view(state));
 }
 
-function view({ searchResults, clickedResults }) {
+function buildNode(name) {
+  const result = state.searchResults.find(res => res.name === name);
+  if (result) {
+    console.log(result);
+
+    let position = 0;
+
+    return h(
+      "g.node",
+      { attrs: { id: name, transform: `translate(100,100)` } },
+      [
+        h("text.name", result.name),
+        ..._.flatMap(result.constructors, c =>
+          _.flatMap(c.parameters, (p, j) => {
+            position += 20;
+            return h(
+              "text.inport",
+              { attrs: { y: position } },
+              `${p.name} <${p.type}>`
+            );
+          })
+        ),
+        ..._.map(result.properties, (p, index) =>
+          h(
+            "text.outport",
+            { attrs: { y: 20 * (index + 1), x: 100 } },
+            `${p.name} <${p.type}>`
+          )
+        )
+      ]
+    );
+  }
+}
+
+function view({ searchResults, clickedResults, activeResult }) {
   return h("div", [
     h(
       "ul#results",
       {
         attrs: { tabindex: 1 }
       },
-      state.searchResults.map(result =>
-        h(
-          "li",
+      searchResults.map(result =>
+        h("li", [
           h(
             "a",
-            { on: { click: handleClick }, attrs: { href: result } },
-            result
-          )
-        )
+            {
+              on: {
+                click: handleClick,
+                mouseover: handleOver,
+                mouseout: handleOut
+              },
+              attrs: { href: result }
+            },
+            result.name
+          ),
+          h("p", result.documentation)
+        ])
       )
     ),
-    h("ul#graph", state.clickedResults.map(result => h("li", result)))
+    h("ul#graph", clickedResults.map(result => h("li", result))),
+    h("svg#svg", buildNode(activeResult))
   ]);
 }
 
@@ -81,7 +135,7 @@ function init(data) {
   const emptyResults = searchText.filter(text => text.length < 1).constant([]);
 
   merge(results, emptyResults).observe(resultContent => {
-    state.searchResults = resultContent.map(result => result.name);
+    state.searchResults = resultContent;
     render();
   });
 }
