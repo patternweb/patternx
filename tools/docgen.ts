@@ -183,10 +183,15 @@ function generateDocumentation(
       );
       details.methods = serializedMembers.filter(
         m => !m.type.match(/^[a-zA-Z0-9]+$/)
-      );
+      ).map(serializeMethod);
     }
 
     return details;
+  }
+
+  function serializeMethod(symbol: DocEntry) {
+    symbol.constructors = []
+    return symbol
   }
 
   /** Serialize a signature (call or construct) */
