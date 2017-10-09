@@ -32,7 +32,7 @@ function handleOver(event) {
 }
 
 function handleOut(event) {
-  state.activeResult = undefined;
+  // state.activeResult = undefined;
   render();
 }
 
@@ -42,6 +42,7 @@ function render() {
 
 function buildNode(name) {
   const result = state.searchResults.find(res => res.name === name);
+  const width = 500;
   if (result) {
     console.log(result);
 
@@ -49,26 +50,48 @@ function buildNode(name) {
 
     return h(
       "g.node",
-      { attrs: { id: name, transform: `translate(100,100)` } },
+      { attrs: { id: name, transform: `translate(50,100)` } },
       [
-        h("text.name", result.name),
-        ..._.flatMap(result.constructors, c =>
-          _.flatMap(c.parameters, (p, j) => {
-            position += 20;
-            return h(
-              "text.inport",
-              { attrs: { y: position } },
-              `${p.name} <${p.type}>`
-            );
-          })
+        h(
+          "text.name",
+          { attrs: { "text-anchor": "middle", x: width / 2 } },
+          result.name
         ),
-        ..._.map(result.properties, (p, index) =>
-          h(
-            "text.outport",
-            { attrs: { y: 20 * (index + 1), x: 100 } },
-            `${p.name} <${p.type}>`
-          )
+        ..._.flatMap(result.constructors, c =>
+          h("g.inports", { y: { position } }, [
+            // add inports for this constructor
+            ..._.map(c.parameters, (p, index) => {
+              position += 20;
+              return h(
+                "text",
+                { attrs: { y: position } },
+                `${p.name} <${p.type}>`
+              );
+            }),
+            h("line", {
+              attrs: {
+                x1: 0,
+                x2: width * 0.8,
+                y1: (position += 10),
+                y2: position
+              }
+            })
+          ])
+        ),
+        h(
+          "text.outport",
+          {
+            attrs: { y: 20, x: width }
+          },
+          result.constructors[0].returnType
         )
+        // ..._.map(result.properties, (p, index) =>
+        //   h(
+        //     "text.outport",
+        //     { attrs: { y: 20 * (index + 1), x: width, 'text-anchor': 'start' } },
+        //     `${p.name} <${p.type}>`
+        //   )
+        // )
       ]
     );
   }

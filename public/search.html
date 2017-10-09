@@ -8,26 +8,32 @@
   <style>
     * {
       box-sizing: border-box;
+      font-family: Menlo;
     }
     #graph, #svg {
       border: 1px solid black;
-      width: 400px;
+      width: 600px;
       height: 400px;
     }
-    text.inport {
+    text.name {
+      text-anchor: middle;
+      font-weight: bold;
+    }
+    g.inports, text.outport {
+      font-size: 10px;
+    }
+    text.outport {
       text-anchor: end;
     }
-    text.name {
-      text-anchor: end;
+    line {
+      stroke: red;
+      stroke-width: 1px;
     }
   </style>
   <title>Search</title>
 </head>
 <body>
-  <form id="search">
-    <input type="text" id="searchbox" autofocus="autofocus" autocomplete="off" placeholder="Add a node..." tabindex="0" />
-    <div id="preview">
-    </div>
-  </form>
+  <input type="text" id="searchbox" autofocus="autofocus" autocomplete="off" placeholder="Add a node..." tabindex="0" />
+  <div id="preview"></div>
 </body>
 </html>
