@@ -1,7 +1,13 @@
 const h = require("snabbdom/h").default;
 
 function build([x, y]) {
-  return h("circle", { attrs: { cx: x, cy: y, r: 10 } });
+  return h(
+    "g",
+    {
+      attrs: { transform: `translate(${x},${y})` }
+    },
+    h("circle", { attrs: { r: 10 } })
+  );
 }
 
 module.exports = {

@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     app: './index.js',
     search: './search/index.js',
-    graph: './graph/graph.js',
+    all: './all.js'
   },
   output: {
     filename: '[name].bundle.js',
