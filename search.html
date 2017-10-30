@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/search.bundle.js" defer async></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Menlo;
+    }
+    #graph, #svg {
+      border: 1px solid black;
+      width: 600px;
+      height: 400px;
+    }
+    text.name {
+      text-anchor: middle;
+      font-weight: bold;
+    }
+    g.inports, text.outport {
+      font-size: 10px;
+    }
+    text.outport {
+      text-anchor: end;
+    }
+    line {
+      stroke: #CCC;
+      stroke-width: 1px;
+    }
+    rect {
+      fill: none;
+      stroke: red;
+    }
+  </style>
+  <title>Search</title>
+</head>
+<body>
+  <div id="searchbox"></div>
+</body>
+</html>
